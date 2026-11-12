@@ -1,6 +1,5 @@
 // Globo 3D com a localização de Emanuel Luz (Feira de Santana, BA)
-(function(){
-  var cv=document.getElementById('globe');if(!cv||!window.THREE)return;
+function mkGlobe(cv,HERO){if(!cv||!window.THREE)return;
   var DOTS=window.EZ_LAND||[];var LAT=-12.2664,LON=-38.9663,R=1;
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,2));
@@ -29,9 +28,9 @@
     var mat=new THREE.MeshPhongMaterial({map:L.load('assets/earth-day.jpg'),bumpMap:L.load('assets/earth-bump.jpg'),bumpScale:.035,specular:new THREE.Color(0x333333),shininess:12});
     satG.add(new THREE.Mesh(new THREE.SphereGeometry(R,96,96),mat));
     clouds=new THREE.Mesh(new THREE.SphereGeometry(R*1.012,64,64),new THREE.MeshPhongMaterial({color:0xffffff,alphaMap:L.load('assets/earth-clouds.jpg'),transparent:true,opacity:.75,depthWrite:false}));satG.add(clouds)}
-  window.EZGlobe={mode:function(m){dotsG.visible=m===1;satG.visible=m===2;if(m===2)loadSat();glow.material.opacity=m===2?.55:1;orb.visible=m===1;sat.visible=m===1}};
+  var api={mode:function(m){dotsG.visible=m===1;satG.visible=m===2;if(m===2)loadSat();glow.material.opacity=m===2?.55:1;orb.visible=m===1;sat.visible=m===1}};
   // law markers (Brasília: federal + CFC, Rio: CVM)
-  var LAWPIN=[];window.EZGlobe.pins=function(list){list.forEach(function(p){var g=new THREE.Group(),pp=v3(p.lat,p.lon,R);g.position.copy(pp);g.lookAt(pp.clone().multiplyScalar(2));
+  var LAWPIN=[];api.pins=function(list){list.forEach(function(p){var g=new THREE.Group(),pp=v3(p.lat,p.lon,R);g.position.copy(pp);g.lookAt(pp.clone().multiplyScalar(2));
       var h=.08+Math.min(.35,p.n/600);var col=new THREE.Mesh(new THREE.CylinderGeometry(.012,.012,h,10),new THREE.MeshBasicMaterial({color:0xf2efe6,transparent:true,opacity:.9}));col.rotation.x=Math.PI/2;col.position.z=h/2;g.add(col);
       var cap=new THREE.Mesh(new THREE.SphereGeometry(.022,12,12),new THREE.MeshBasicMaterial({color:0xffffff}));cap.position.z=h;g.add(cap);globe.add(g);LAWPIN.push({g:g,cap:cap,el:p.el})})};
   // marker
@@ -49,15 +48,16 @@
   size();addEventListener('resize',size);
   // drag
   var drag=null,vy=0,vx=0,ry=0,rx=.12,back=false;
-  cv.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,ry:ry,rx:rx};cv.setPointerCapture(e.pointerId);cv.classList.add('drag');back=false});
+  if(!HERO)cv.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,ry:ry,rx:rx};cv.setPointerCapture(e.pointerId);cv.classList.add('drag');back=false});
   cv.addEventListener('pointermove',function(e){if(!drag)return;ry=drag.ry+(e.clientX-drag.x)*.006;rx=Math.max(-.9,Math.min(.9,drag.rx+(e.clientY-drag.y)*.004))});
   function up(){drag=null;cv.classList.remove('drag')}cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
-  var btn=document.getElementById('globeHome');if(btn)btn.onclick=function(){back=true};
-  var lbl=document.getElementById('globeLbl'),vis=false;new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(cv);
+  if(!HERO)window.EZGlobe=api;else{api.mode(2);cam.position.z=3.4}
+  var btn=HERO?null:document.getElementById('globeHome');if(btn)btn.onclick=function(){back=true};
+  var lbl=HERO?null:document.getElementById('globeLbl'),vis=false;new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(cv);
   var t0=performance.now(),wp=new THREE.Vector3();
   (function loop(now){requestAnimationFrame(loop);if(!vis)return;var t=(now-t0)/1000;
     if(back){ry*=.92;rx+=(.12-rx)*.08;if(Math.abs(ry)<.002)back=false}
-    else if(!drag&&!reduce){ry+=Math.sin(t*.35)*.0016}
+    else if(HERO&&!reduce){ry+=.0012}else if(!drag&&!reduce){ry+=Math.sin(t*.35)*.0016}
     pivot.rotation.y=ry;pivot.rotation.x=rx;
     rings.forEach(function(rg,k){var s=((t*.6+k/3)%1);rg.scale.setScalar(1+s*5);rg.material.opacity=(1-s)*.8});
     var a=t*.4;sat.position.set(Math.cos(a)*1.32,Math.sin(a)*1.32*Math.cos(Math.PI/2.4)*-1,Math.sin(a)*1.32*Math.sin(Math.PI/2.4)).applyEuler(new THREE.Euler(0,.3,0));
@@ -67,4 +67,8 @@
       LAWPIN.forEach(function(L){L.cap.getWorldPosition(wp);var f=wp.z>.1,q=wp.clone().project(cam);L.el.style.transform='translate('+((q.x*.5+.5)*w)+'px,'+((-q.y*.5+.5)*h)+'px)';L.el.style.opacity=f?1:0})}
     if(clouds)clouds.rotation.y+=.0004;
   })(t0);
-})();
+}
+mkGlobe(document.getElementById('globe'),false);
+window.EZHeroGlobe=function(){if(window._hg)return;window._hg=1;mkGlobe(document.getElementById('gl2'),true)};
+(function(){var k='ez_hero_v';function set(v){document.body.classList.toggle('hero2',v==2);document.querySelectorAll('[data-hv]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-hv')==v)});if(v==2)window.EZHeroGlobe();try{localStorage.setItem(k,v)}catch(e){}}
+document.querySelectorAll('[data-hv]').forEach(function(b){b.onclick=function(){set(b.getAttribute('data-hv'))}});var s='1';try{s=localStorage.getItem(k)||'1'}catch(e){}set(s)})();

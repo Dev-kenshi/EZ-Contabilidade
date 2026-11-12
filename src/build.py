@@ -184,7 +184,7 @@ __GXCSS__
 
 <header id="topo">
   <div class="hero-type" aria-hidden="true">EZ</div>
-  <canvas id="gl" aria-hidden="true"></canvas>
+  <canvas id="gl" aria-hidden="true"></canvas><canvas id="gl2" aria-hidden="true"></canvas>
   <div class="wrap hero">
     <div class="rv">
       <div class="kick">Contabilidade &middot; Estratégia &middot; Tecnologia</div>
@@ -196,7 +196,7 @@ __GXCSS__
       </div>
       <div class="hero-cta2"><span class="live"></span><span>Novo: mapa gratuito com <b id="heroN">200</b> normas do CFC e atos da reforma. <a href="#normas">Abrir a galáxia</a></span></div>
     </div>
-    <div class="hero-photo-wrap rv"><div class="ring"></div>
+    <div class="hero-photo-wrap rv"><div class="ring"></div><div class="gmode hmode"><button data-hv="1" class="on"><b>1</b><span>Rede</span></button><button data-hv="2"><b>2</b><span>Satélite</span></button></div>
       <div class="photo"><img src="data:image/jpeg;base64,{A}" alt="Emanuel Luz de terno, sentado em uma poltrona, em preto e branco">
       <div class="badge"><b>Aprovado</b>Exame de Suficiência CFC 2/2026</div></div>
       <span class="chip3 c1"><i></i>IBS &middot; CBS</span><span class="chip3 c2"><i></i>IFRS</span><span class="chip3 c3"><i></i>NBC TG</span><span class="chip3 c4"><i></i>IA aplicada</span>
