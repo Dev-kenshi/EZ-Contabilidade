@@ -1,5 +1,9 @@
 # EZ Contabilidade
 
+## Preparação após integrar tarefas
+
+O script `tools/post-merge.sh`, configurado como preparação pós-integração, valida os dados e gera o site novamente. Ele não instala dependências nem executa verificações externas de links. Depois dele, o Replit sincroniza os workflows.
+
 ## Estrutura e execução
 
 Site estático existente em HTML, CSS e JavaScript, gerado por Python. Mantenha a estrutura e a stack do repositório.
