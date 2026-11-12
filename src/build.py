@@ -178,7 +178,7 @@ __GXCSS__
 <a class="pill" id="pill" data-manual href="{MANUAL}" target="_blank" rel="noopener">Manual do IR 2027 grátis &rarr;</a>
 <nav id="nav"><div class="wrap">
   <a href="#topo" class="logo"><img src="{MONO}" alt="Monograma EZ Contabilidade" style="width:40px;height:40px">EMANUEL LUZ</a>
-  <div class="links" id="links"><a href="#normas">Normas</a><a href="#desafio">Desafio</a><a href="#atuacao">Atuação</a><a href="#conteudo">Grátis</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#marca">Marca</a><a href="#faq">FAQ</a><a href="#contato">Links</a></div>
+  <div class="links" id="links"><a href="#normas">Normas</a><a href="#desafio">Desafio</a><a href="#atuacao">Atuação</a><a href="#conteudo">Grátis</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#marca">Marca</a><a href="#local">Local</a><a href="#faq">FAQ</a><a href="#contato">Links</a></div>
   <button class="menu" id="menu" aria-label="Abrir menu">&#9776;</button>
 </div></nav>
 
@@ -349,6 +349,16 @@ __GXCSS__
   </div>
 </div></section>
 
+
+<section id="local"><div class="floor3d" aria-hidden="true"></div><div class="wrap loc">
+  <div class="rv"><div class="kick"><span class="idx">&#9670;</span>Onde estou</div><h2 class="sl">De Feira de Santana <i>para o Brasil.</i></h2>
+  <p class="sub">Minha base é Feira de Santana, na Bahia, a Princesa do Sertão. Daqui saem os conteúdos, os projetos e a galáxia de normas, de graça, para qualquer lugar.</p>
+  <div class="coord">12°16&prime;S &middot; 38°58&prime;O<small>Feira de Santana &middot; Bahia &middot; Brasil</small></div>
+  <div class="chips"><span><i></i>UEFS</span><span><i></i>Princesa do Sertão</span><span><i></i>Conteúdo online para todo o país</span></div></div>
+  <div class="gstage rv"><canvas id="globe" aria-label="Globo 3D com a localização de Feira de Santana, Bahia"></canvas>
+    <div class="glbl" id="globeLbl"><div><b>Feira de Santana, BA</b><small>Você está aqui com a EZ</small></div></div>
+    <div class="gtools"><span>Arraste para girar</span><button id="globeHome">&#9678; Centralizar</button></div></div>
+</div></section>
 <section class="contact" id="contato"><div class="floor3d" aria-hidden="true"></div><div class="wrap rv">
   <div class="kick">Contato</div>
   <h2 class="sl">Vamos <i>conversar?</i></h2>
@@ -362,7 +372,7 @@ __GXCSS__
   </div>
 </div></section>
 
-<footer><div class="wrap"><span>&copy; 2026 EZ Contabilidade &middot; Emanuel Luz &middot; Feira de Santana, Bahia &middot; <i class="serif">Contabilidade com método.</i></span><span>Conteúdo educativo. Não substitui a orientação de um contador.</span></div></footer>
+<footer><div class="floor3d" aria-hidden="true" style="height:100%"></div><div class="wrap"><span>&copy; 2026 EZ Contabilidade &middot; Emanuel Luz &middot; Feira de Santana, Bahia &middot; <i class="serif">Contabilidade com método.</i></span><span>Conteúdo educativo. Não substitui a orientação de um contador.</span></div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
@@ -416,8 +426,9 @@ __GXCSS__
   (function loop(t){{g.rotation.y=(reduce?0:t*.00015)+mx*.4;g.rotation.x=my*.3;core.rotation.y=-t*.0003;r.render(sc,cam);requestAnimationFrame(loop)}})(0);
 }})();
 </script>
-<script>window.EZ_ASSETS={{mono:"{MONO}",logo:"{LOGO}",manual:"{MANUAL}",ig:"{IG}"}};window.GX=__GXDATA__;</script>
+<script>window.EZ_ASSETS={{mono:"{MONO}",logo:"{LOGO}",manual:"{MANUAL}",ig:"{IG}"}};window.GX=__GXDATA__;window.EZ_LAND=__LAND__;</script>
 <script>__GAMEJS__</script>
+<script>__GLOBEJS__</script>
 <script>__GXJS__
 (function(){{var done=false;function go(d){{if(done)return;done=true;window.GXinit(d)}}
 try{{var t=setTimeout(function(){{go(window.GX)}},2500);fetch('data/galaxia.json',{{cache:'no-store'}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(d){{clearTimeout(t);go(d&&d.normas?d:window.GX)}}).catch(function(){{clearTimeout(t);go(window.GX)}})}}catch(e){{go(window.GX)}}}})();</script>
@@ -431,7 +442,7 @@ LS=L(P('data','links_status.json')) or {}
 NOR=L(P('data','normas_cfc.json')); REF=L(P('data','reforma.json'))
 UPD='12/11/2026'
 data=json.dumps({'normas':NOR,'reforma':REF,'atualizado':UPD,'links_verificados':LS.get('verificado','') if isinstance(LS,dict) else ''},ensure_ascii=False).replace('</','<\\/')
-html=html.replace('__GXCSS__',open(P('src','galaxy.css')).read()+open(P('src','game.css')).read()).replace('__GXJS__',open(P('src','galaxy.js')).read()).replace('__GXDATA__',data).replace('__GAMEJS__',open(P('src','game.js')).read()).replace('__UPD__',UPD)
+html=html.replace('__LAND__',open(P('data','land-dots.json')).read()).replace('__GXCSS__',open(P('src','galaxy.css')).read()+open(P('src','game.css')).read()).replace('__GXJS__',open(P('src','galaxy.js')).read()).replace('__GXDATA__',data).replace('__GAMEJS__',open(P('src','game.js')).read()).replace('__GLOBEJS__',open(P('src','globe.js')).read()).replace('__UPD__',UPD)
 open(P('index.html'),'w').write(html)
 open(P('data','galaxia.json'),'w').write(json.dumps({'normas':NOR,'reforma':REF,'atualizado':UPD,'links_verificados':LS.get('verificado','') if isinstance(LS,dict) else ''},ensure_ascii=False,indent=1))
 print(len(html)//1024, "KB")

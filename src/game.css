@@ -165,7 +165,7 @@ header .wrap,.contact .wrap{position:relative;z-index:1}
 .contact{position:relative;overflow:hidden}
 .rv{transform:perspective(1000px) rotateX(16deg) translateY(40px);transform-origin:50% 100%}
 .rv.on{transform:none}
-h2.sl{text-shadow:0 1px 0 rgba(255,255,255,.04),0 18px 40px rgba(0,0,0,.35)}
+.sl .w{padding-bottom:.12em;margin-bottom:-.12em}
 .ez-trail{margin:44px 0 10px}
 .ez-trail .holo{height:380px;margin:0}
 .hero-photo-wrap .photo{transform-style:preserve-3d}
@@ -174,3 +174,63 @@ h2.sl{text-shadow:0 1px 0 rgba(255,255,255,.04),0 18px 40px rgba(0,0,0,.35)}
 .hero-photo-wrap .chip3{transform-style:preserve-3d}
 @media (hover:none){.tilt{transform:none!important}}
 @media (prefers-reduced-motion:reduce){.floor3d::before{animation:none}.rv{transform:none}}
+/* ===== globe section ===== */
+#local{position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 50%,#13233a 0%,#0a0a0a 62%)}
+.loc{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.loc .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.loc .chips span{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 14px;font:600 12.5px Inter;color:#e8e6df;background:rgba(255,255,255,.03)}
+.loc .chips i{width:7px;height:7px;border-radius:50%;background:var(--gold2);box-shadow:0 0 10px var(--gold2)}
+.loc .coord{font:400 46px/1 "Bebas Neue";color:var(--gold2);margin-top:28px;letter-spacing:.03em;text-shadow:0 0 30px rgba(240,199,94,.25)}
+.loc .coord small{display:block;font:600 11px Inter;letter-spacing:.2em;color:var(--mute);margin-top:8px;text-transform:uppercase}
+.gstage{position:relative;aspect-ratio:1;max-width:620px;width:100%;justify-self:center}
+#globe{width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
+#globe.drag{cursor:grabbing}
+.glbl{position:absolute;left:0;top:0;pointer-events:none;transition:opacity .3s}
+.glbl div{position:absolute;left:16px;bottom:14px;white-space:nowrap;background:rgba(8,10,16,.86);border:1px solid rgba(240,199,94,.55);border-radius:14px;padding:10px 14px;box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 24px rgba(240,199,94,.15)}
+.glbl b{display:block;font:600 14px Inter;color:var(--fg)}
+.glbl small{font:500 11.5px Inter;color:var(--gold2);letter-spacing:.06em}
+.glbl::before{content:"";position:absolute;left:0;top:0;width:16px;height:1px;background:var(--gold2);transform:rotate(-40deg);transform-origin:0 0}
+.gtools{position:absolute;right:6%;bottom:6%;display:flex;gap:8px;align-items:center}
+.gtools button{border:1px solid var(--line);background:rgba(10,10,10,.7);color:var(--fg);border-radius:999px;padding:9px 14px;font:600 12.5px Inter;cursor:pointer;backdrop-filter:blur(6px)}
+.gtools button:hover{border-color:var(--gold)}
+.gtools span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6b65}
+@media (max-width:960px){.loc{grid-template-columns:1fr}.gtools span{display:none}.loc .coord{font-size:32px}}
+/* ===== remaining parts in 3D ===== */
+.marq{perspective:900px;background:linear-gradient(180deg,#0a0a0a,#0d1522);border-top:1px solid rgba(240,199,94,.18)}
+.marq .tr{transform:rotateX(18deg)}
+.marq span{text-shadow:0 1px 0 #6d5a22,0 2px 0 #4a3d17,0 6px 14px rgba(0,0,0,.6)}
+.stats{perspective:1000px}
+.stat{transform-style:preserve-3d;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
+.stat .bebas{text-shadow:0 1px 0 #b58a1e,0 2px 0 #8a6a12,0 3px 0 #5e4810,0 10px 22px rgba(0,0,0,.55)}
+.btn{position:relative;transform-style:preserve-3d}
+.btn.gold{box-shadow:0 4px 0 #8a6a12,0 14px 28px rgba(212,163,42,.25)}
+.btn.gold:active{transform:translateY(3px)!important;box-shadow:0 1px 0 #8a6a12,0 6px 14px rgba(212,163,42,.2)}
+.btn.ghost{box-shadow:0 4px 0 rgba(255,255,255,.06)}
+.hero-type{transform:perspective(700px) rotateX(24deg) rotateY(-14deg);transform-origin:0 100%;-webkit-text-stroke:1px rgba(240,199,94,.28);
+}
+.timeline{perspective:1200px}
+.ti{background:linear-gradient(140deg,rgba(255,255,255,.035),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:18px;padding:22px 24px 22px;margin-bottom:16px;transform-style:preserve-3d}
+.ti::before{left:-46px;top:30px;width:16px;height:16px;background:radial-gradient(circle at 35% 30%,#ffe9a8,#d4a32a 55%,#6d5414);box-shadow:0 0 0 6px rgba(212,163,42,.12),0 0 18px rgba(240,199,94,.55)}
+.ti .when{text-shadow:0 1px 0 #8a6a12,0 2px 0 #5e4810}
+.faq{perspective:1200px}
+.faq details{background:#fff;border:1px solid #dcd9d2;border-radius:16px;padding:18px 22px;margin-bottom:12px;box-shadow:0 10px 24px rgba(0,0,0,.05);transition:transform .35s,box-shadow .35s}
+.faq details:hover{transform:translateY(-3px) rotateX(4deg);box-shadow:0 22px 40px rgba(0,0,0,.09)}
+.faq details[open]{box-shadow:0 26px 50px rgba(0,0,0,.10);border-color:rgba(212,163,42,.55)}
+.faq details[open] p{animation:fq .45s cubic-bezier(.2,.7,.1,1)}
+@keyframes fq{from{opacity:0;transform:rotateX(-28deg);transform-origin:top}}
+.list a{transition:transform .3s,padding .2s,color .2s}
+.list a:hover{transform:perspective(600px) translateZ(14px)}
+.gx-stage{transform-style:preserve-3d}
+.gx-stage::after{content:"";position:absolute;left:-10%;right:-10%;bottom:0;height:45%;pointer-events:none;z-index:1;
+ background-image:linear-gradient(rgba(240,199,94,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(242,239,230,.07) 1px,transparent 1px);background-size:60px 60px;
+ transform:perspective(500px) rotateX(70deg);transform-origin:50% 100%;-webkit-mask-image:linear-gradient(to top,#000,transparent 80%);mask-image:linear-gradient(to top,#000,transparent 80%)}
+.gx-list .row{transition:transform .2s,background .15s}
+.gx-list .row:hover{transform:translateX(6px)}
+.brandbox img{animation:coin 9s ease-in-out infinite}
+@keyframes coin{0%,100%{transform:perspective(800px) rotateY(-10deg)}50%{transform:perspective(800px) rotateY(10deg) translateZ(10px)}}
+.qz-opts{perspective:900px}
+.qz-opts button{box-shadow:0 3px 0 #e3e0d8}
+.qz-opts button:active:not(:disabled){transform:translateY(2px)}
+footer{position:relative;overflow:hidden}
+.pill{box-shadow:0 4px 0 #8a6a12,0 14px 40px rgba(0,0,0,.45)}
+@media (prefers-reduced-motion:reduce){.brandbox img{animation:none}}
