@@ -1,5 +1,5 @@
 run = "python3 src/build.py && python3 -m http.server 8000 --bind 0.0.0.0"
-modules = ["python-3.11", "nodejs-20"]
+modules = ["web", "python-3.12", "nodejs-20"]
 
 [[ports]]
 localPort = 8000
@@ -9,3 +9,6 @@ externalPort = 80
 deploymentTarget = "static"
 publicDir = "."
 build = ["python3", "src/build.py"]
+
+[nix]
+channel = "stable-25_05"
