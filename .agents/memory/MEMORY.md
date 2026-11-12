@@ -1,0 +1,1 @@
+- [Browser interaction testing](browser-interaction-testing.md) — this static site can run real browser checks without adding test dependencies.

@@ -6,6 +6,7 @@
     "build": "python3 src/build.py",
     "validar": "python3 tools/validar_dados.py",
     "validar:links": "node tools/validar_links.mjs",
+    "test": "python3 src/build.py && python3 tools/test_interactions.py",
     "start": "python3 -m http.server 8000"
   }
 }
