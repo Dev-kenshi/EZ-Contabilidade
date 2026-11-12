@@ -234,3 +234,38 @@ header .wrap,.contact .wrap{position:relative;z-index:1}
 footer{position:relative;overflow:hidden}
 .pill{box-shadow:0 4px 0 #8a6a12,0 14px 40px rgba(0,0,0,.45)}
 @media (prefers-reduced-motion:reduce){.brandbox img{animation:none}}
+/* globe versions + law pins */
+.gmode{position:absolute;left:50%;top:4%;transform:translateX(-50%);z-index:4;display:flex;gap:6px;background:rgba(8,10,16,.8);border:1px solid rgba(240,199,94,.35);border-radius:999px;padding:5px;backdrop-filter:blur(8px)}
+.gmode button{border:0;background:none;color:#cfcdc6;font:600 12.5px Inter;border-radius:999px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.gmode button b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(240,199,94,.6);font:400 15px "Bebas Neue";color:var(--gold2)}
+.gmode button.on{background:var(--gold);color:#0a0a0a}.gmode button.on b{background:#0a0a0a;border-color:#0a0a0a}
+.lpin{position:absolute;left:0;top:0;z-index:3;margin:-46px 0 0 10px;border:1px solid rgba(242,239,230,.45);background:rgba(8,10,16,.82);color:#cfcdc6;border-radius:12px;padding:6px 10px;font:500 11px Inter;text-align:left;cursor:pointer;white-space:nowrap;transition:opacity .3s,border-color .2s}
+.lpin b{display:block;font:600 12.5px Inter;color:var(--fg)}
+.lpin:hover{border-color:var(--gold2)}
+/* laws panel */
+#leis{margin-top:70px;position:relative;z-index:1}
+.lhead{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.lhead h3{font-family:"Playfair Display",serif;font-size:clamp(28px,3.4vw,44px);line-height:1.05;margin-top:12px}.lhead h3 i{color:var(--gold2);font-weight:400}
+.lhead p{color:#bdbbb4;font-size:15px;max-width:620px;margin-top:10px;line-height:1.6}
+.lctl{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;align-items:center}
+.lctl .gx-search{flex:1;min-width:240px}
+.lctl select{background:rgba(255,255,255,.04);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:13px 16px;font:500 14px Inter}
+.lctl select option{color:#111}
+#lchips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+#lchips button{border:1px solid var(--line);background:none;color:#e8e6df;border-radius:999px;padding:7px 13px;font:500 12.5px Inter;cursor:pointer}
+#lchips button small{color:#77756e}#lchips button.on{border-color:var(--gold);color:var(--gold2);background:rgba(212,163,42,.08)}
+#lc{font:400 30px "Bebas Neue";color:var(--gold2)}
+#ll{margin-top:18px;border:1px solid var(--line);border-radius:20px;max-height:620px;overflow:auto;background:rgba(255,255,255,.015)}
+.lrow{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:18px 20px;border-bottom:1px solid var(--line);transition:background .15s,transform .2s}
+.lrow:hover{background:rgba(255,255,255,.03);transform:translateX(4px)}
+.ld{font:400 20px "Bebas Neue";color:#e8e6df;letter-spacing:.02em}
+.lo{display:inline-block;margin-top:6px;font:600 10px Inter;letter-spacing:.14em;border-radius:99px;padding:3px 8px;border:1px solid currentColor}
+.lo.federal{color:#f2efe6}.lo.cfc{color:var(--gold2)}.lo.cvm{color:#a9c0e0}
+.lt b{font-size:15px;font-weight:600;color:var(--fg)}
+.lt p{font-size:14px;color:#aeaca5;line-height:1.55;margin-top:4px}
+.la{display:flex;gap:16px;margin-top:8px}.la a{font-size:13px;color:var(--gold2);border-bottom:1px solid rgba(240,199,94,.35)}.la a+a{color:#9a988f;border-color:#3a3936}
+.lmore{display:block;width:100%;padding:16px;background:none;border:0;color:var(--gold2);font:600 14px Inter;cursor:pointer}
+.lempty{padding:30px;text-align:center;color:var(--mute)}
+.lsrc{font-size:12px;color:#6d6b65;margin-top:14px;line-height:1.6}.lsrc a{border-bottom:1px solid #3a3936}
+@media (max-width:960px){.lrow{grid-template-columns:1fr;gap:6px}.lpin{display:none}.gmode button span{display:none}}
+.lpin.dn{margin:10px 0 0 14px}

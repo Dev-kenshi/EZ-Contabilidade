@@ -355,9 +355,16 @@ __GXCSS__
   <p class="sub">Minha base é Feira de Santana, na Bahia, a Princesa do Sertão. Daqui saem os conteúdos, os projetos e a galáxia de normas, de graça, para qualquer lugar.</p>
   <div class="coord">12°16&prime;S &middot; 38°58&prime;O<small>Feira de Santana &middot; Bahia &middot; Brasil</small></div>
   <div class="chips"><span><i></i>UEFS</span><span><i></i>Princesa do Sertão</span><span><i></i>Conteúdo online para todo o país</span></div></div>
-  <div class="gstage rv"><canvas id="globe" aria-label="Globo 3D com a localização de Feira de Santana, Bahia"></canvas>
+  <div class="gstage rv" id="gstage"><div class="gmode"><button data-gm="1" class="on"><b>1</b><span>Tema EZ</span></button><button data-gm="2"><b>2</b><span>Satélite real</span></button></div><canvas id="globe" aria-label="Globo 3D com a localização de Feira de Santana, Bahia"></canvas>
     <div class="glbl" id="globeLbl"><div><b>Feira de Santana, BA</b><small>Você está aqui com a EZ</small></div></div>
     <div class="gtools"><span>Arraste para girar</span><button id="globeHome">&#9678; Centralizar</button></div></div>
+</div><div class="wrap">
+<div id="leis" class="rv"><div class="lhead"><div><div class="kick"><span class="idx">&#9670;</span>Leis contábeis no mapa</div><h3>Do Decreto-Lei 9.295 <i>às resoluções de hoje.</i></h3>
+<p>As leis federais que regem a contabilidade, as resoluções do CFC e os atos contábeis da CVM, marcados no globo. Pesquise e ordene por data ou em ordem alfabética.</p></div><div id="lc"></div></div>
+<div class="lctl"><label class="gx-search"><span aria-hidden="true">&#9906;</span><input id="lq" type="search" placeholder="Busque: 6.404, exame de suficiência, CPC 47, escrituração..." aria-label="Buscar leis contábeis"></label>
+<select id="ls" aria-label="Ordenar"><option value="asc">Data: mais antigas</option><option value="desc">Data: mais recentes</option><option value="az">Ordem alfabética (A a Z)</option></select></div>
+<div id="lchips"></div><div id="ll"></div>
+<p class="lsrc">Fonte: acervo <a href="https://github.com/ctresb/leis" target="_blank" rel="noopener">ctresb/leis</a> (licença MIT), com textos convertidos de fontes oficiais. Confira sempre o Diário Oficial antes de citar. Imagens de satélite: NASA Blue Marble.</p></div>
 </div></section>
 <section class="contact" id="contato"><div class="floor3d" aria-hidden="true"></div><div class="wrap rv">
   <div class="kick">Contato</div>
@@ -426,9 +433,10 @@ __GXCSS__
   (function loop(t){{g.rotation.y=(reduce?0:t*.00015)+mx*.4;g.rotation.x=my*.3;core.rotation.y=-t*.0003;r.render(sc,cam);requestAnimationFrame(loop)}})(0);
 }})();
 </script>
-<script>window.EZ_ASSETS={{mono:"{MONO}",logo:"{LOGO}",manual:"{MANUAL}",ig:"{IG}"}};window.GX=__GXDATA__;window.EZ_LAND=__LAND__;</script>
+<script>window.EZ_ASSETS={{mono:"{MONO}",logo:"{LOGO}",manual:"{MANUAL}",ig:"{IG}"}};window.GX=__GXDATA__;window.EZ_LAND=__LAND__;window.EZ_LEIS=__LEIS__;</script>
 <script>__GAMEJS__</script>
 <script>__GLOBEJS__</script>
+<script>__LEISJS__</script>
 <script>__GXJS__
 (function(){{var done=false;function go(d){{if(done)return;done=true;window.GXinit(d)}}
 try{{var t=setTimeout(function(){{go(window.GX)}},2500);fetch('data/galaxia.json',{{cache:'no-store'}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(d){{clearTimeout(t);go(d&&d.normas?d:window.GX)}}).catch(function(){{clearTimeout(t);go(window.GX)}})}}catch(e){{go(window.GX)}}}})();</script>
@@ -442,7 +450,7 @@ LS=L(P('data','links_status.json')) or {}
 NOR=L(P('data','normas_cfc.json')); REF=L(P('data','reforma.json'))
 UPD='12/11/2026'
 data=json.dumps({'normas':NOR,'reforma':REF,'atualizado':UPD,'links_verificados':LS.get('verificado','') if isinstance(LS,dict) else ''},ensure_ascii=False).replace('</','<\\/')
-html=html.replace('__LAND__',open(P('data','land-dots.json')).read()).replace('__GXCSS__',open(P('src','galaxy.css')).read()+open(P('src','game.css')).read()).replace('__GXJS__',open(P('src','galaxy.js')).read()).replace('__GXDATA__',data).replace('__GAMEJS__',open(P('src','game.js')).read()).replace('__GLOBEJS__',open(P('src','globe.js')).read()).replace('__UPD__',UPD)
+html=html.replace('__LEIS__',json.dumps([{k:o[k] for k in ('titulo','tipo','data','ementa','orgao','url','arquivo')} for o in json.load(open(P('data','leis.json')))],ensure_ascii=False).replace('\u2014',',').replace('</','<\\/')).replace('__LAND__',open(P('data','land-dots.json')).read()).replace('__GXCSS__',open(P('src','galaxy.css')).read()+open(P('src','game.css')).read()).replace('__GXJS__',open(P('src','galaxy.js')).read()).replace('__GXDATA__',data).replace('__GAMEJS__',open(P('src','game.js')).read()).replace('__GLOBEJS__',open(P('src','globe.js')).read()).replace('__LEISJS__',open(P('src','leis.js')).read()).replace('__UPD__',UPD)
 open(P('index.html'),'w').write(html)
 open(P('data','galaxia.json'),'w').write(json.dumps({'normas':NOR,'reforma':REF,'atualizado':UPD,'links_verificados':LS.get('verificado','') if isinstance(LS,dict) else ''},ensure_ascii=False,indent=1))
 print(len(html)//1024, "KB")
