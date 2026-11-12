@@ -1,0 +1,11 @@
+{
+  "name": "ez-contabilidade",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 src/build.py",
+    "validar": "python3 tools/validar_dados.py",
+    "validar:links": "node tools/validar_links.mjs",
+    "start": "python3 -m http.server 8000"
+  }
+}

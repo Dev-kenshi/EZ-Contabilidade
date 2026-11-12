@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 300" width="1260" height="300" role="img" aria-label="EZ Contabilidade. Emanuel luZ, Contabilidade">
+  <title>EZ Contabilidade, Emanuel luZ</title>
+  <svg x="40" y="40" width="220" height="220" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="49" fill="#0e1a2b"/>
+  <circle cx="50" cy="50" r="44.5" fill="none" stroke="#d4a32a" stroke-width="2.2"/>
+  
+  <g fill="#efede8">
+    <rect x="30" y="30" width="8.5" height="40"/>
+    <rect x="30" y="30" width="40" height="8"/>
+    <rect x="30" y="62" width="40" height="8"/>
+    <rect x="30" y="46" width="16" height="8"/>
+  </g>
+  <polygon points="58.5,38 70,38 38.5,62 27.0,62" fill="#0e1a2b"/>
+  <polygon points="61.5,38 70,38 38.5,62 30,62" fill="#d4a32a"/>
+  </svg>
+  <rect x="300" y="70" width="1.6" height="160" fill="#d4a32a" opacity="0.7"/>
+  <text x="338" y="168" font-family="'Bebas Neue', 'Oswald', 'Arial Narrow', Impact, sans-serif" font-size="112" letter-spacing="5" fill="#0e1a2b"><tspan fill="#d4a32a">EZ</tspan> CONTABILIDADE</text>
+  <rect x="341" y="197" width="40" height="2" fill="#d4a32a"/>
+  <text x="396" y="208" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="400" letter-spacing="3" fill="#3a4658"><tspan fill="#d4a32a" font-weight="700">E</tspan>manuel lu<tspan fill="#d4a32a" font-weight="700">Z</tspan>  ·  <tspan font-family="'Playfair Display', Georgia, serif" font-style="italic" letter-spacing="1" fill="#0e1a2b">Accounting</tspan></text>
+</svg>

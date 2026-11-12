@@ -1,0 +1,452 @@
+[
+  {
+    "codigo": "EC 132/2023",
+    "titulo": "Emenda da Reforma Tributária",
+    "tipo": "Emenda Constitucional",
+    "data": "2023-12-20",
+    "resumo": "Cria IBS, CBS e Imposto Seletivo e define a transição de 2026 a 2033.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "NT 2025.002-RTC",
+    "titulo": "NF-e e NFC-e adaptadas à reforma",
+    "tipo": "Nota Técnica",
+    "data": "2025",
+    "resumo": "Inclui grupos e campos de IBS, CBS e IS na NF-e e NFC-e.",
+    "url": "https://www.reformatributaria.com/wp-content/uploads/2025/03/NT_2025.002_v1.00_RTC_NF-e_IBS_CBS_IS-1.pdf",
+    "verificar": false
+  },
+  {
+    "codigo": "Comunicado RFB",
+    "titulo": "Ambiente de produção beta da CBS",
+    "tipo": "Notícia oficial",
+    "data": "2025",
+    "resumo": "Receita Federal divulga comunicado sobre o ambiente de produção beta da reforma.",
+    "url": "https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/manuais/reforma-tributaria-do-consumo/comunicado-sobre-o-ambiente-de-producao-beta-versao-1-dezembro25",
+    "verificar": true
+  },
+  {
+    "codigo": "LC 214/2025",
+    "titulo": "Lei geral do IBS, CBS e IS",
+    "tipo": "Lei Complementar",
+    "data": "2025-01-16",
+    "resumo": "Institui IBS, CBS e Imposto Seletivo, com regimes, cesta básica, cashback e split payment.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "LC 214/2025 (Anexo I)",
+    "titulo": "Cesta Básica Nacional com alíquota zero",
+    "tipo": "Lei Complementar",
+    "data": "2025-01-16",
+    "resumo": "Lista os produtos da Cesta Básica Nacional com redução a zero de IBS e CBS.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Split payment 2027",
+    "titulo": "Receita confirma split payment para 2027",
+    "tipo": "Notícia oficial",
+    "data": "2025-07-02",
+    "resumo": "Receita Federal confirma início do split payment em 2027, com adesão gradual.",
+    "url": "https://reformatributaria.sefin.ro.gov.br/2025/07/02/receita-federal-confirma-split-payment-para-2027/",
+    "verificar": false
+  },
+  {
+    "codigo": "NFS-e Nacional",
+    "titulo": "NFS-e padrão nacional obrigatória",
+    "tipo": "Notícia oficial",
+    "data": "2025-08-14",
+    "resumo": "Receita informa que a NFS-e padrão nacional será obrigatória a partir de janeiro de 2026.",
+    "url": "https://fenacon.org.br/reforma-tributaria/nota-fiscal-de-servico-eletronica-nfs-e-sera-obrigatoria-a-partir-de-janeiro-de-2026/",
+    "verificar": false
+  },
+  {
+    "codigo": "Ato Conjunto RFB/CGIBS 1/2025",
+    "titulo": "Obrigações acessórias de 2026",
+    "tipo": "Ato Conjunto",
+    "data": "2025-12-22",
+    "resumo": "Define as obrigações acessórias do ano teste e o período sem penalidades.",
+    "url": "https://www.cgibs.gov.br/atos-conjuntos",
+    "verificar": false
+  },
+  {
+    "codigo": "Ano teste 2026",
+    "titulo": "Início do ano teste de IBS e CBS",
+    "tipo": "Marco do calendário",
+    "data": "2026-01-01",
+    "resumo": "CBS a 0,9% e IBS a 0,1% destacados em nota, com dispensa de recolhimento para quem cumpre as obrigações.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "NFS-e Nacional 2026",
+    "titulo": "Adesão obrigatória dos municípios à NFS-e Nacional",
+    "tipo": "Marco do calendário",
+    "data": "2026-01-01",
+    "resumo": "Municípios passam a usar o padrão nacional da NFS-e.",
+    "url": "https://fenacon.org.br/reforma-tributaria/nota-fiscal-de-servico-eletronica-nfs-e-sera-obrigatoria-a-partir-de-janeiro-de-2026/",
+    "verificar": false
+  },
+  {
+    "codigo": "LC 227/2026",
+    "titulo": "Comitê Gestor do IBS e processo administrativo",
+    "tipo": "Lei Complementar",
+    "data": "2026-01-13",
+    "resumo": "Institui o CGIBS, regula o processo administrativo do IBS e o ITCMD e altera a LC 214.",
+    "url": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html",
+    "verificar": false
+  },
+  {
+    "codigo": "Resolução CGIBS 4/2026",
+    "titulo": "Regimento interno procedimental do CGIBS",
+    "tipo": "Resolução",
+    "data": "2026-04-08",
+    "resumo": "Aprova o regimento interno procedimental do Comitê Gestor do IBS.",
+    "url": "https://cgibs.gov.br/upload/arquivos/202604/13174441-resolucao-cgibs-n-4-de-8-de-abril-de-2026-regimento-interno-procedimental.pdf",
+    "verificar": false
+  },
+  {
+    "codigo": "Resolução CGSN 186/2026",
+    "titulo": "Opção pelo Simples e regime regular de IBS e CBS em 2027",
+    "tipo": "Resolução",
+    "data": "2026-04-09",
+    "resumo": "Fixa prazos e condições de opção pelo Simples e pelo recolhimento regular de IBS e CBS.",
+    "url": "https://www.normaslegais.com.br/legislacao/resolucao-cgsn-186-2026.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Decreto 12.955/2026",
+    "titulo": "Regulamento da CBS (RCBS)",
+    "tipo": "Decreto",
+    "data": "2026-04-29",
+    "resumo": "Aprova o regulamento da CBS, incluindo regras de cashback.",
+    "url": "https://fenacon.org.br/reforma-tributaria/publicado-decreto-que-regulamenta-a-contribuicao-social-sobre-bens-e-servicos-cbs/",
+    "verificar": false
+  },
+  {
+    "codigo": "Resolução CGIBS 6/2026",
+    "titulo": "Regulamento do IBS (RIBS)",
+    "tipo": "Resolução",
+    "data": "2026-04-30",
+    "resumo": "O Comitê Gestor aprova o regulamento do IBS.",
+    "url": "https://www.cgibs.gov.br/regulamentos",
+    "verificar": false
+  },
+  {
+    "codigo": "Portaria Conjunta MF/CGIBS 7/2026",
+    "titulo": "Disposições comuns à CBS e ao IBS",
+    "tipo": "Ato Conjunto",
+    "data": "2026-04-30",
+    "resumo": "Reconhece as disposições comuns à CBS e ao IBS nos dois regulamentos.",
+    "url": "https://www.cgibs.gov.br/regulamentos",
+    "verificar": false
+  },
+  {
+    "codigo": "Ato Conjunto RFB/CGIBS 2/2026",
+    "titulo": "Manual da plataforma de split payment",
+    "tipo": "Ato Conjunto",
+    "data": "2026-05-27",
+    "resumo": "Autoriza publicar o manual de integração e o Swagger da plataforma pública de split payment.",
+    "url": "https://www.cgibs.gov.br/atos-conjuntos",
+    "verificar": false
+  },
+  {
+    "codigo": "Ato Conjunto RFB/CGIBS 3/2026",
+    "titulo": "Documentação técnica da DeRE",
+    "tipo": "Ato Conjunto",
+    "data": "2026-06-19",
+    "resumo": "Autoriza publicar a documentação da Declaração de Regimes Específicos.",
+    "url": "https://www.cgibs.gov.br/atos-conjuntos",
+    "verificar": false
+  },
+  {
+    "codigo": "Decreto 13.075/2026",
+    "titulo": "Adia CNPJ e notas para pessoas físicas e produtor rural",
+    "tipo": "Decreto",
+    "data": "2026-07-21",
+    "resumo": "Altera o RCBS e adia para 2027 o CNPJ e a emissão de notas de pessoas físicas contribuintes.",
+    "url": "https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13075-21-julho-2026-799662-norma-pe.html",
+    "verificar": false
+  },
+  {
+    "codigo": "Resolução CGIBS 13/2026",
+    "titulo": "Alteração do Regulamento do IBS",
+    "tipo": "Resolução",
+    "data": "2026-07-22",
+    "resumo": "Altera o regulamento do IBS e revisa prazos de obrigatoriedade.",
+    "url": "https://cgibs.gov.br/upload/arquivos/202607/22121010-resolucao-cgibs-n-13-de-22-de-julho-de-2026.pdf",
+    "verificar": false
+  },
+  {
+    "codigo": "Ato Conjunto RFB/CGIBS 4/2026",
+    "titulo": "Cronograma dos documentos fiscais eletrônicos",
+    "tipo": "Ato Conjunto",
+    "data": "2026-07-30",
+    "resumo": "Fixa as datas de obrigatoriedade dos documentos fiscais com IBS e CBS.",
+    "url": "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos",
+    "verificar": false
+  },
+  {
+    "codigo": "Marco DF-e 03/08/2026",
+    "titulo": "NF-e, NFC-e, CT-e e MDF-e com IBS e CBS",
+    "tipo": "Marco do calendário",
+    "data": "2026-08-03",
+    "resumo": "Começa a obrigatoriedade dos campos de IBS e CBS na NF-e, NFC-e, CT-e e MDF-e.",
+    "url": "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos",
+    "verificar": false
+  },
+  {
+    "codigo": "Ato Conjunto RFB/CGIBS 5/2026",
+    "titulo": "Programa Nacional de Conformidade Tributária",
+    "tipo": "Ato Conjunto",
+    "data": "2026-08-12",
+    "resumo": "Regula o PNCT de 2026 para adaptação à emissão de documentos com IBS e CBS.",
+    "url": "https://www.cgibs.gov.br/atos-conjuntos",
+    "verificar": false
+  },
+  {
+    "codigo": "Ato Conjunto RFB/CGIBS 6/2026",
+    "titulo": "Dispensa de CNPJ e de emissão de documentos",
+    "tipo": "Ato Conjunto",
+    "data": "2026-08-28",
+    "resumo": "Dispensa a inscrição no CNPJ e a emissão de documentos previstas nos regulamentos.",
+    "url": "https://www.cgibs.gov.br/atos-conjuntos",
+    "verificar": false
+  },
+  {
+    "codigo": "Split payment 2028",
+    "titulo": "Split payment obrigatório só em 2028",
+    "tipo": "Notícia oficial",
+    "data": "2026-08-31",
+    "resumo": "Receita informa que o split payment será opcional em 2027 e obrigatório em 2028.",
+    "url": "https://www.reformatributaria.com/tecnologia/split-payment-so-sera-obrigatorio-em-2028-diz-receita-federal/",
+    "verificar": false
+  },
+  {
+    "codigo": "Modelo RFB ao TCU",
+    "titulo": "Receita envia ao TCU modelo da alíquota da CBS",
+    "tipo": "Notícia oficial",
+    "data": "2026-09-14",
+    "resumo": "Receita envia ao TCU o modelo de cálculo da alíquota de referência, sem número.",
+    "url": "https://tagdlaw.com.br/?p=15539",
+    "verificar": false
+  },
+  {
+    "codigo": "Resolução CGSN 194/2026",
+    "titulo": "Novos prazos do Simples e do regime híbrido",
+    "tipo": "Resolução",
+    "data": "2026-09-25",
+    "resumo": "Prorroga a opção pelo Simples para 15/10 e pelo regime regular de IBS e CBS para 30/10/2026.",
+    "url": "https://fenacon.org.br/wp-content/uploads/2026/09/Resolucao-CGSN-no-194-DE-25-DE-setembro-DE-2026-Resolucao-CGSN-no-194-DE-25-DE-setembro-DE-2026-DOU-Imprensa-Naciona.pdf",
+    "verificar": false
+  },
+  {
+    "codigo": "Marco DF-e 01/10/2026",
+    "titulo": "NFS-e, NFCom e DeRE 1ª fase",
+    "tipo": "Marco do calendário",
+    "data": "2026-10-01",
+    "resumo": "Começa a obrigatoriedade para NFS-e de serviços gerais, NFCom e DeRE 1ª fase.",
+    "url": "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos",
+    "verificar": false
+  },
+  {
+    "codigo": "TCU CBS 2027",
+    "titulo": "TCU calcula alíquota de referência da CBS",
+    "tipo": "Notícia oficial",
+    "data": "2026-10-28",
+    "resumo": "TCU calcula alíquota de referência de 11,3% para a CBS em 2027.",
+    "url": "https://portal.tcu.gov.br/imprensa/noticias/tcu-calcula-aliquota-de-referencia-de-113-para-novo-tributo-sobre-consumo",
+    "verificar": false
+  },
+  {
+    "codigo": "Prazo Simples 30/10/2026",
+    "titulo": "Fim da opção pelo regime híbrido",
+    "tipo": "Marco do calendário",
+    "data": "2026-10-30",
+    "resumo": "Último dia para optante do Simples escolher recolher IBS e CBS pelo regime regular em 2027.",
+    "url": "https://fenacon.org.br/wp-content/uploads/2026/09/Resolucao-CGSN-no-194-DE-25-DE-setembro-DE-2026-Resolucao-CGSN-no-194-DE-25-DE-setembro-DE-2026-DOU-Imprensa-Naciona.pdf",
+    "verificar": false
+  },
+  {
+    "codigo": "NT 2025.002 v1.53",
+    "titulo": "Ajustes de validação da NF-e e NFC-e",
+    "tipo": "Nota Técnica",
+    "data": "2026-10-30",
+    "resumo": "Altera regras de validação de IBS e CBS, com produção prevista para 16/11/2026.",
+    "url": "https://documentacao.senior.com.br/exigenciaslegais/noticias/federal/2026/2026-10-30-nf-e-nfc-e-nota-tecnica-no-2025-002-versao-1-53-reforma-tributaria-adequacoes-nf-e-nfc-e",
+    "verificar": false
+  },
+  {
+    "codigo": "MP 1.399/2026",
+    "titulo": "Alíquotas transitórias do Imposto Seletivo",
+    "tipo": "Medida Provisória",
+    "data": "2026-11-05",
+    "resumo": "Fixa as alíquotas do IS até 2027 em níveis equivalentes ao IPI atual.",
+    "url": "https://www.gazetadopovo.com.br/economia/governo-envia-ao-congresso-mp-que-regulamenta-imposto-do-pecado/",
+    "verificar": true
+  },
+  {
+    "codigo": "Marco DeRE 15/11/2026",
+    "titulo": "DeRE 2ª fase",
+    "tipo": "Marco do calendário",
+    "data": "2026-11-15",
+    "resumo": "Começa a obrigatoriedade da 2ª fase da Declaração de Regimes Específicos.",
+    "url": "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos",
+    "verificar": false
+  },
+  {
+    "codigo": "Marco DF-e 01/12/2026",
+    "titulo": "NF-e de não contribuintes do ICMS e NFS-e de plataformas",
+    "tipo": "Marco do calendário",
+    "data": "2026-12-01",
+    "resumo": "Começa a obrigatoriedade para NF-e de não contribuintes do ICMS, NFS-e de plataformas e condomínios.",
+    "url": "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos",
+    "verificar": false
+  },
+  {
+    "codigo": "Prazo Senado CBS",
+    "titulo": "Senado fixa alíquota de referência da CBS",
+    "tipo": "Marco do calendário",
+    "data": "2026-12-15",
+    "resumo": "Prazo para o Senado aprovar a resolução da alíquota de 2027; sem ela vale o cálculo do TCU.",
+    "url": "https://tagdlaw.com.br/?p=15539",
+    "verificar": false
+  },
+  {
+    "codigo": "Prazo Simples 20/12/2026",
+    "titulo": "Fim do prazo para desistir do regime híbrido",
+    "tipo": "Marco do calendário",
+    "data": "2026-12-20",
+    "resumo": "Último dia para cancelar a opção pelo regime regular de IBS e CBS em 2027.",
+    "url": "https://coad.com.br/home/noticias-detalhe/140588/reforma-tributaria-prazo-para-desistir-do-regime-hibrido-termina-em-20-de-dezembro",
+    "verificar": false
+  },
+  {
+    "codigo": "IS 2027",
+    "titulo": "Início do Imposto Seletivo e IPI zerado",
+    "tipo": "Marco do calendário",
+    "data": "2027",
+    "resumo": "Imposto Seletivo começa a ser cobrado e o IPI é zerado, salvo produtos da Zona Franca de Manaus.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "IBS 2027-2028",
+    "titulo": "IBS a 0,1% em 2027 e 2028",
+    "tipo": "Marco do calendário",
+    "data": "2027",
+    "resumo": "IBS segue com alíquota de teste de 0,1%, dividida entre estados e municípios.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Início CBS 2027",
+    "titulo": "CBS plena e fim do PIS e da Cofins",
+    "tipo": "Marco do calendário",
+    "data": "2027-01-01",
+    "resumo": "CBS passa a ser cobrada integralmente e PIS e Cofins são extintos.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Cesta básica 2027",
+    "titulo": "Alíquota zero da Cesta Básica Nacional",
+    "tipo": "Marco do calendário",
+    "data": "2027-01-01",
+    "resumo": "Itens do Anexo I da LC 214 passam a ter CBS zerada com a cobrança efetiva.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Cashback CBS 2027",
+    "titulo": "Início do cashback da CBS",
+    "tipo": "Marco do calendário",
+    "data": "2027-01-01",
+    "resumo": "Famílias do CadÚnico com renda até meio salário mínimo por pessoa recebem devolução da CBS.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Simples 2027",
+    "titulo": "Documentos fiscais do Simples com IBS e CBS",
+    "tipo": "Marco do calendário",
+    "data": "2027-01-01",
+    "resumo": "Documentos fiscais do Simples Nacional passam a ter IBS e CBS obrigatórios.",
+    "url": "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos",
+    "verificar": false
+  },
+  {
+    "codigo": "Split payment 2027",
+    "titulo": "Split payment opcional",
+    "tipo": "Marco do calendário",
+    "data": "2027-01-01",
+    "resumo": "Split payment fica disponível de forma opcional nas operações entre empresas.",
+    "url": "https://www.reformatributaria.com/tecnologia/split-payment-so-sera-obrigatorio-em-2028-diz-receita-federal/",
+    "verificar": false
+  },
+  {
+    "codigo": "Split payment 2028",
+    "titulo": "Split payment obrigatório",
+    "tipo": "Marco do calendário",
+    "data": "2028",
+    "resumo": "Split payment passa a ser obrigatório nas operações entre empresas.",
+    "url": "https://www.reformatributaria.com/tecnologia/split-payment-so-sera-obrigatorio-em-2028-diz-receita-federal/",
+    "verificar": false
+  },
+  {
+    "codigo": "Transição 2029",
+    "titulo": "Início da redução do ICMS e do ISS",
+    "tipo": "Marco do calendário",
+    "data": "2029",
+    "resumo": "ICMS e ISS caem 10% e o IBS sobe na mesma proporção.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Cashback IBS 2029",
+    "titulo": "Início do cashback do IBS",
+    "tipo": "Marco do calendário",
+    "data": "2029",
+    "resumo": "Devolução da parcela estadual e municipal do IBS começa de forma gradual.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Transição 2030",
+    "titulo": "ICMS e ISS reduzidos em 20%",
+    "tipo": "Marco do calendário",
+    "data": "2030",
+    "resumo": "Alíquotas de ICMS e ISS ficam em 80% das atuais.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Transição 2031",
+    "titulo": "ICMS e ISS reduzidos em 30%",
+    "tipo": "Marco do calendário",
+    "data": "2031",
+    "resumo": "Alíquotas de ICMS e ISS ficam em 70% das atuais.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Transição 2032",
+    "titulo": "ICMS e ISS reduzidos em 40%",
+    "tipo": "Marco do calendário",
+    "data": "2032",
+    "resumo": "Alíquotas de ICMS e ISS ficam em 60% das atuais.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  },
+  {
+    "codigo": "Transição 2033",
+    "titulo": "Extinção do ICMS e do ISS",
+    "tipo": "Marco do calendário",
+    "data": "2033",
+    "resumo": "ICMS e ISS deixam de existir e IBS e CBS vigoram plenamente.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm",
+    "verificar": false
+  }
+]

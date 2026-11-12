@@ -1,0 +1,299 @@
+{
+ "verificado": "12/11/2026",
+ "total": 73,
+ "quebrados": 0,
+ "links": {
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/normas-completas/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-tsp-do-setor-publico/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-3-r1-de-13-de-novembro-de-2025-693133761": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-4-r1-de-13-de-novembro-de-2025-693109856": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-5-r1-de-13-de-novembro-de-2025-693133093": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-6-r1-de-13-de-novembro-de-2025-693114054": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-8-r1-de-13-de-novembro-de-2025-693106246": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-9-r1-de-11-de-dezembro-de-2025-693136905": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-10-r1-de-11-de-dezembro-de-2025-693119864": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-11-r1-de-11-de-dezembro-de-2025-693138159": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-12-r1-de-11-de-dezembro-de-2025-693114967": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-13-r1-de-13-de-novembro-de-2025-693112469": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-14-r1-de-13-de-novembro-de-2025-693132440": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-15-r1-de-13-de-novembro-de-2025-693127156": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-16-r1-de-13-de-novmebro-de-2025-693107368": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-17-r1-de-13-de-novembro-de-2025-693114121": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-18-r1-de-13-de-novembro-de-2025-693105280": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-19-r1-de-13-de-novembro-de-2025-693106944": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-20-r1-de-13-de-novembro-de-2025-693130709": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-21-r1-de-13-de-novembro-de-2025-693119165": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-22-r1-de-13-de-novembro-de-2025-693111517": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tspn-23-r1-de-13-de-novembro-de-2025-693114944": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-24-r1-de-11-de-dezembro-de-2025-693798980": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-25-r1-de-13-de-novembro-de-2025-693805022": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-26-r1-de-11-de-dezembro-de-2025-693784020": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-27-r1-de-13-de-novembro-de-2025-693784172": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-28-r1-de-13-de-novembro-de-2025-693790872": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-29-r1-de-13-de-novembro-de-2025-693117590": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-30-r1-de-11-de-dezembro-de-2025-693106109": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-31-r1-de-13-de-novembro-de-2025-693127110": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-32-r1-de-13-de-novembro-de-2025-693124675": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-33-r1-de-11-de-dezembro-de-2025-693113919": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/web/dou/-/norma-brasileira-de-contabilidade-nbc-tsp-n-37-de-11-de-dezembro-de-2025-693128631": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-ta-de-auditoria-independente/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/wp-content/uploads/2026/06/NBCTA260-R2-2.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/wp-content/uploads/2026/06/NBCTA700.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/wp-content/uploads/2026/06/NBC-TA-706.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/wp-content/uploads/2021/06/CTA-30.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/wp-content/uploads/2021/06/CTA-31.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-tr-de-revisao/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-to-de-asseguracao/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-tsc-de-servico-correlato/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-ti-de-auditoria-interna/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-pg-geral/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-pa-do-auditor-independente/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-tp-de-pericia/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-pp-do-perito-contabil/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/wp-content/uploads/2023/01/ITG-1000.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/en/web/dou/-/norma-brasileira-de-contabilidade-nbc-tds-1-de-17-de-outubro-de-2024-592765575": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cfc.org.br/tecnica/normas-brasileiras-de-contabilidade/nbc-tds-de-sustentabilidade/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.in.gov.br/en/web/dou/-/norma-brasileira-de-contabilidade-nbc-tds-2-de-17-de-outubro-de-2024-592794983": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.reformatributaria.com/wp-content/uploads/2025/03/NT_2025.002_v1.00_RTC_NF-e_IBS_CBS_IS-1.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/manuais/reforma-tributaria-do-consumo/comunicado-sobre-o-ambiente-de-producao-beta-versao-1-dezembro25": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://reformatributaria.sefin.ro.gov.br/2025/07/02/receita-federal-confirma-split-payment-para-2027/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://fenacon.org.br/reforma-tributaria/nota-fiscal-de-servico-eletronica-nfs-e-sera-obrigatoria-a-partir-de-janeiro-de-2026/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.cgibs.gov.br/atos-conjuntos": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cgibs.gov.br/upload/arquivos/202604/13174441-resolucao-cgibs-n-4-de-8-de-abril-de-2026-regimento-interno-procedimental.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.normaslegais.com.br/legislacao/resolucao-cgsn-186-2026.htm": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://fenacon.org.br/reforma-tributaria/publicado-decreto-que-regulamenta-a-contribuicao-social-sobre-bens-e-servicos-cbs/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.cgibs.gov.br/regulamentos": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www2.camara.leg.br/legin/fed/decret/2026/decreto-13075-21-julho-2026-799662-norma-pe.html": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cgibs.gov.br/upload/arquivos/202607/22121010-resolucao-cgibs-n-13-de-22-de-julho-de-2026.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://cgibs.gov.br/receita-federal-e-comite-gestor-do-ibs-publicam-o-cronograma-de-implementacao-dos-documentos-fiscais-eletronicos": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.reformatributaria.com/tecnologia/split-payment-so-sera-obrigatorio-em-2028-diz-receita-federal/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://tagdlaw.com.br/?p=15539": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://fenacon.org.br/wp-content/uploads/2026/09/Resolucao-CGSN-no-194-DE-25-DE-setembro-DE-2026-Resolucao-CGSN-no-194-DE-25-DE-setembro-DE-2026-DOU-Imprensa-Naciona.pdf": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://portal.tcu.gov.br/imprensa/noticias/tcu-calcula-aliquota-de-referencia-de-113-para-novo-tributo-sobre-consumo": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://documentacao.senior.com.br/exigenciaslegais/noticias/federal/2026/2026-10-30-nf-e-nfc-e-nota-tecnica-no-2025-002-versao-1-53-reforma-tributaria-adequacoes-nf-e-nfc-e": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://www.gazetadopovo.com.br/economia/governo-envia-ao-congresso-mp-que-regulamenta-imposto-do-pecado/": {
+   "ok": true,
+   "metodo": "navegador"
+  },
+  "https://coad.com.br/home/noticias-detalhe/140588/reforma-tributaria-prazo-para-desistir-do-regime-hibrido-termina-em-20-de-dezembro": {
+   "ok": true,
+   "metodo": "navegador"
+  }
+ }
+}
