@@ -175,7 +175,7 @@ __GXCSS__
 </style></head>
 <body>
 <div class="prog" id="prog"></div><div class="cur" id="cur"></div>
-<a class="pill" id="pill" href="{MANUAL}" target="_blank" rel="noopener">Manual do IR 2027 grátis &rarr;</a>
+<a class="pill" id="pill" data-manual href="{MANUAL}" target="_blank" rel="noopener">Manual do IR 2027 grátis &rarr;</a>
 <nav id="nav"><div class="wrap">
   <a href="#topo" class="logo"><img src="{MONO}" alt="Monograma EZ Contabilidade" style="width:40px;height:40px">EMANUEL LUZ</a>
   <div class="links" id="links"><a href="#normas">Normas</a><a href="#desafio">Desafio</a><a href="#atuacao">Atuação</a><a href="#conteudo">Grátis</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#marca">Marca</a><a href="#faq">FAQ</a><a href="#contato">Links</a></div>
@@ -203,6 +203,7 @@ __GXCSS__
     </div>
   </div>
   <div class="scroll">ROLE &darr;</div>
+  <div class="floor3d" aria-hidden="true"></div>
 </header>
 
 <div class="marq" aria-hidden="true"><div class="tr">
@@ -260,6 +261,7 @@ __GXCSS__
 <section id="jornada"><div class="wrap">
   <div class="rv"><div class="kick"><span class="idx">&#9670;</span>Sua jornada</div><h2 class="sl">Do estágio a <i>Contador do Amanhã.</i></h2>
   <p class="sub">Explore o site, abra normas, faça o desafio e leve o conteúdo para a sua IA. Seu progresso fica salvo neste navegador.</p></div>
+  <div class="ez-trail rv" id="ezTrail"></div>
   <div class="jn-grid">
     <div class="jn-lv rv"><div class="k">Seu nível</div><h3 id="ezLevelBig">Estagiário</h3><div class="big"><span id="ezXpBig">0</span> XP</div><p id="ezNext"></p>
       <ul><li><b>+10 XP</b> por seção explorada</li><li><b>+5 XP</b> por norma aberta na galáxia</li><li><b>+10 XP</b> por acerto no desafio</li><li><b>+15 XP</b> no tour guiado</li><li><b>+20 XP</b> ao exportar para a sua IA</li></ul></div>
@@ -347,7 +349,7 @@ __GXCSS__
   </div>
 </div></section>
 
-<section class="contact" id="contato"><div class="wrap rv">
+<section class="contact" id="contato"><div class="floor3d" aria-hidden="true"></div><div class="wrap rv">
   <div class="kick">Contato</div>
   <h2 class="sl">Vamos <i>conversar?</i></h2>
   <p class="sub" style="margin:0 auto">Projetos, palestras, parcerias ou uma dúvida sobre impostos. Me chame no Instagram.</p>
@@ -414,7 +416,7 @@ __GXCSS__
   (function loop(t){{g.rotation.y=(reduce?0:t*.00015)+mx*.4;g.rotation.x=my*.3;core.rotation.y=-t*.0003;r.render(sc,cam);requestAnimationFrame(loop)}})(0);
 }})();
 </script>
-<script>window.GX=__GXDATA__;</script>
+<script>window.EZ_ASSETS={{mono:"{MONO}",logo:"{LOGO}",manual:"{MANUAL}",ig:"{IG}"}};window.GX=__GXDATA__;</script>
 <script>__GAMEJS__</script>
 <script>__GXJS__
 (function(){{var done=false;function go(d){{if(done)return;done=true;window.GXinit(d)}}

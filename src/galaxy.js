@@ -194,5 +194,5 @@ window.GXinit=function(D){
   var dEl=document.getElementById('gxDay');
   if(dEl&&items.length){var pool=items.filter(function(i){return i.k==='n'&&i.resumo});var dt=new Date(),di=(dt.getFullYear()*372+dt.getMonth()*31+dt.getDate())%pool.length,it=pool[di];
     dEl.innerHTML='<span class="k">Norma do dia</span><b>'+esc(it.codigo)+'</b><span class="t">'+esc(it.titulo)+'</span><span class="go">Abrir &rarr;</span>';
-    dEl.onclick=function(){cv.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){open(it)},450)}}
+    dEl.onclick=function(){if(window.EZG&&EZG.mark)EZG.mark('dia','Norma do dia');cv.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){open(it)},450)}}
 };
