@@ -515,11 +515,109 @@ footer{position:relative;overflow:hidden}
 body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
 .hmode{top:-64px;z-index:5}
 @media (max-width:960px){#gl2{width:130vw;right:-55%;opacity:.6}.hmode{top:-56px}}
+/* =========================================================
+   EZ Contabilidade · camada de materiais (texture.css)
+   Papel, metal, vidro e película. Tudo em SVG/CSS, sem imagens extras.
+   ========================================================= */
+:root{
+  /* ruídos procedurais */
+  --tx-grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --tx-paper:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='420'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='.035 .9' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 .42  0 0 0 0 .38  0 0 0 0 .3  0 0 0 .16 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+  --tx-linen:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6'><path d='M0 0h6v1H0zM0 3h6v1H0z' fill='%23ffffff' fill-opacity='.018'/><path d='M0 0v6h1V0zM3 0v6h1V0z' fill='%23000000' fill-opacity='.12'/></svg>");
+  /* ouro com brilho especular */
+  --gold-foil:linear-gradient(100deg,#8a6411 0%,#c99a2e 18%,#f6dc8e 34%,#d9ad3c 48%,#9c7417 62%,#e9c867 80%,#a87d1c 100%);
+  /* sombras em camadas, como luz real */
+  --sh-soft:0 1px 1px rgba(0,0,0,.18),0 2px 4px rgba(0,0,0,.16),0 8px 16px rgba(0,0,0,.18),0 24px 48px rgba(0,0,0,.22);
+  --sh-paper:0 1px 0 rgba(255,255,255,.9) inset,0 1px 2px rgba(60,48,20,.08),0 6px 14px rgba(60,48,20,.08),0 22px 40px rgba(60,48,20,.10);
+  --edge:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -1px 0 rgba(0,0,0,.6);
+}
+
+/* ---------- película global (substitui o ruído antigo) ---------- */
+body::after{background:var(--tx-grain)!important;opacity:.07!important;mix-blend-mode:overlay;animation:tx-grain 1.2s steps(6) infinite}
+@keyframes tx-grain{0%{transform:translate(0,0)}20%{transform:translate(-2%,1%)}40%{transform:translate(1%,-2%)}60%{transform:translate(-1%,2%)}80%{transform:translate(2%,1%)}100%{transform:translate(0,0)}}
+
+/* ---------- superfícies escuras: linho profundo + vinheta ---------- */
+header,section:not(.light),.stats,.contact{background-image:var(--tx-linen),radial-gradient(120% 80% at 50% -10%,rgba(40,64,98,.28),transparent 60%),radial-gradient(140% 100% at 50% 120%,rgba(0,0,0,.65),transparent 55%)}
+.stats{background-color:var(--navy)}
+
+/* ---------- papel: fibras, calor e borda de luz ---------- */
+.light{position:relative;isolation:isolate;background-color:#eeebe4;background-image:var(--tx-paper),radial-gradient(120% 90% at 30% 0%,#f7f4ee 0%,#ece8e0 55%,#e2ddd3 100%)}
+.light::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;box-shadow:inset 0 30px 60px -40px rgba(0,0,0,.25),inset 0 -30px 60px -40px rgba(0,0,0,.18)}
+
+/* ---------- metal dourado ---------- */
+.kick,.card .n,.ti .when,.stat .bebas,.feature .bebas,h1 i,.idx{background:var(--gold-foil);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;animation:tx-foil 9s ease-in-out infinite}
+.light .kick,.light .idx{background:linear-gradient(100deg,#6f4f0c,#a8801f 40%,#d4ad4c 55%,#7d5a10);-webkit-background-clip:text;background-clip:text}
+@keyframes tx-foil{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+h1 i{filter:drop-shadow(0 1px 0 rgba(0,0,0,.35))}
+
+/* ---------- botões táteis ---------- */
+.btn.gold{position:relative;overflow:hidden;background:var(--gold-foil);background-size:180% 100%;color:#1a1204;text-shadow:0 1px 0 rgba(255,240,200,.45);box-shadow:inset 0 1px 0 rgba(255,248,220,.7),inset 0 -2px 0 rgba(90,60,5,.45),0 6px 18px rgba(212,163,42,.25),0 2px 4px rgba(0,0,0,.35)}
+.btn.gold::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .7s ease}
+.btn.gold:hover{background-position:100% 0}
+.btn.gold:hover::after{left:130%}
+.btn.gold:active{transform:translateY(1px);box-shadow:inset 0 2px 6px rgba(90,60,5,.55),0 1px 2px rgba(0,0,0,.3)}
+.btn.ghost{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));box-shadow:var(--edge);backdrop-filter:blur(6px)}
+
+/* ---------- vidro escuro (cards, links, feature) ---------- */
+.card,.lk a,.feature,.brandbox{position:relative;background-color:rgba(18,18,20,.72);background-image:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,0) 40%),var(--tx-grain);background-size:auto,180px;background-blend-mode:normal,soft-light;box-shadow:var(--edge),var(--sh-soft);backdrop-filter:blur(10px) saturate(1.1)}
+.card::before,.feature::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(240,199,94,.14),transparent 45%);opacity:0;transition:opacity .35s}
+.card:hover::before,.feature:hover::before{opacity:1}
+.feature{background-color:rgba(14,26,43,.85)}
+
+/* ---------- papel cartão (projetos, tags, faq) ---------- */
+.pc{background:#fbf9f5 var(--tx-paper);box-shadow:var(--sh-paper);border-color:#e3dfd6}
+.pc h3,.light h2{text-shadow:0 1px 0 rgba(255,255,255,.85),0 -1px 0 rgba(0,0,0,.06)}
+.pc.wide{background:var(--navy) var(--tx-linen);box-shadow:var(--edge),var(--sh-soft)}
+.tags span{background:linear-gradient(180deg,#f8f6f1,#ebe7df);box-shadow:inset 0 1px 0 #fff,0 1px 2px rgba(60,48,20,.12)}
+.faq details{border-bottom-color:transparent;background-image:linear-gradient(90deg,transparent,#cfc9bd 15%,#cfc9bd 85%,transparent);background-size:100% 1px;background-repeat:no-repeat;background-position:bottom}
+
+/* ---------- fotografia: tom de filme, halação e passe-partout ---------- */
+.photo{box-shadow:0 0 0 1px rgba(255,255,255,.06),0 0 0 10px rgba(239,237,232,.03),var(--sh-soft)}
+.photo img{filter:grayscale(1) contrast(1.12) brightness(.96)}
+.photo::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--tx-grain);background-size:160px;opacity:.22;mix-blend-mode:overlay}
+
+/* ---------- divisórias e régua da timeline ---------- */
+.timeline{border-left:0;background:linear-gradient(180deg,transparent,rgba(212,163,42,.6) 8%,rgba(212,163,42,.25) 92%,transparent) 0 0/1px 100% no-repeat}
+.ti::before{background:radial-gradient(circle at 35% 30%,#fff3c4,#d4a32a 45%,#7a560c);box-shadow:0 0 0 5px rgba(212,163,42,.12),0 0 18px rgba(240,199,94,.35)}
+.stats .wrap{position:relative}
+.stat{border-right-color:transparent;background:linear-gradient(180deg,transparent,rgba(255,255,255,.1),transparent) right/1px 70% no-repeat}
+
+/* ---------- navegação em vidro ---------- */
+nav.solid{background:rgba(10,10,10,.62);backdrop-filter:blur(18px) saturate(1.3);box-shadow:0 1px 0 rgba(255,255,255,.05),0 10px 30px rgba(0,0,0,.35)}
+.logo b{background:radial-gradient(circle at 30% 25%,rgba(255,240,190,.25),transparent 60%);box-shadow:inset 0 1px 0 rgba(255,240,200,.25),0 0 0 1px rgba(0,0,0,.4)}
+
+/* ---------- acessibilidade e desempenho ---------- */
+@media (prefers-reduced-motion:reduce){body::after,.kick,.card .n,.ti .when,.stat .bebas,.feature .bebas,h1 i,.idx{animation:none}}
+@media (max-width:760px){.card,.lk a,.feature,.brandbox{backdrop-filter:none}body::after{animation:none}}
+
+/* =========================================================
+   Assinatura: papel de livro-razão nas seções claras
+   pauta azul-acinzentada a cada 34px e margem dupla dourada
+   ========================================================= */
+.light{background-image:
+  linear-gradient(90deg,transparent calc(max(28px,(100vw - 1180px)/2) - 18px),rgba(176,124,26,.38) 0,rgba(176,124,26,.38) calc(max(28px,(100vw - 1180px)/2) - 17px),transparent 0,transparent calc(max(28px,(100vw - 1180px)/2) - 13px),rgba(176,124,26,.38) 0,rgba(176,124,26,.38) calc(max(28px,(100vw - 1180px)/2) - 12px),transparent 0),
+  repeating-linear-gradient(180deg,transparent 0 33px,rgba(92,122,150,.13) 33px 34px),
+  var(--tx-paper),
+  radial-gradient(120% 90% at 30% 0%,#f7f4ee 0%,#ece8e0 55%,#e2ddd3 100%)}
+
+/* rubrica: rótulo em itálico, caixa normal, sem tracking de template */
+.kick{text-transform:none!important;letter-spacing:.01em!important;font:italic 500 17px/1.3 "Playfair Display",serif!important}
+
+/* preto com base no azul da marca, não cinza genérico */
+:root{--ink:#06090f}
+body{background:var(--ink)}
+.card{padding-top:34px}
+.card h3{margin-top:0}
+
+/* foco visível para teclado */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #f0c75e;outline-offset:3px;border-radius:6px}
+nav.solid{background:rgba(6,9,15,.88)}
+.pc .tag{text-transform:none;letter-spacing:.01em;font:italic 500 15px/1.3 "Playfair Display",serif}
 
 </style></head>
 <body>
 <div class="prog" id="prog"></div><div class="cur" id="cur"></div>
-<a class="pill" id="pill" data-manual href="https://drive.google.com/file/d/1tZUdhQxEQAaKb--z3ND4S6lukWqo-PQV/view" target="_blank" rel="noopener">Manual do IR 2027 grátis &rarr;</a>
+<a class="pill" id="pill" data-manual href="https://drive.google.com/file/d/1tZUdhQxEQAaKb--z3ND4S6lukWqo-PQV/view" target="_blank" rel="noopener">Manual do IR 2027 grátis</a>
 <nav id="nav"><div class="wrap">
   <a href="#topo" class="logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJFWiBDb250YWJpbGlkYWRlIG1vbm9ncmFtYTogRSBkZSBFbWFudWVsIGUgWiBkZSBsdVoiPgogIDx0aXRsZT5FWiBDb250YWJpbGlkYWRlLCBtb25vZ3JhbWE8L3RpdGxlPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQ5IiBmaWxsPSIjMGUxYTJiIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iNDQuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDRhMzJhIiBzdHJva2Utd2lkdGg9IjIuMiIvPgogIAogIDxnIGZpbGw9IiNlZmVkZTgiPgogICAgPHJlY3QgeD0iMzAiIHk9IjMwIiB3aWR0aD0iOC41IiBoZWlnaHQ9IjQwIi8+CiAgICA8cmVjdCB4PSIzMCIgeT0iMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI4Ii8+CiAgICA8cmVjdCB4PSIzMCIgeT0iNjIiIHdpZHRoPSI0MCIgaGVpZ2h0PSI4Ii8+CiAgICA8cmVjdCB4PSIzMCIgeT0iNDYiIHdpZHRoPSIxNiIgaGVpZ2h0PSI4Ii8+CiAgPC9nPgogIDxwb2x5Z29uIHBvaW50cz0iNTguNSwzOCA3MCwzOCAzOC41LDYyIDI3LjAsNjIiIGZpbGw9IiMwZTFhMmIiLz4KICA8cG9seWdvbiBwb2ludHM9IjYxLjUsMzggNzAsMzggMzguNSw2MiAzMCw2MiIgZmlsbD0iI2Q0YTMyYSIvPgo8L3N2Zz4K" alt="Monograma EZ Contabilidade" style="width:40px;height:40px">EMANUEL LUZ</a>
   <div class="links" id="links"><a href="#normas">Normas</a><a href="#desafio">Desafio</a><a href="#atuacao">Atuação</a><a href="#conteudo">Grátis</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#marca">Marca</a><a href="#local">Local</a><a href="#faq">FAQ</a><a href="#contato">Links</a></div>
@@ -535,7 +633,7 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
       <h1>Contabilidade<br>que <span class="ol">pensa</span><br><i>em dados.</i></h1>
       <p class="lead">Explico impostos, reforma tributária e inteligência artificial para quem quer decidir melhor. Sou Emanuel Luz, Ciências Contábeis na UEFS e aprovado no Exame do CFC.</p>
       <div class="ctas">
-        <a class="btn gold" href="https://drive.google.com/file/d/1tZUdhQxEQAaKb--z3ND4S6lukWqo-PQV/view" target="_blank" rel="noopener">Baixar o Manual do IR 2027 &rarr;</a>
+        <a class="btn gold" href="https://drive.google.com/file/d/1tZUdhQxEQAaKb--z3ND4S6lukWqo-PQV/view" target="_blank" rel="noopener">Baixar o Manual do IR 2027</a>
         <a class="btn ghost" href="#normas">Explorar as normas</a>
       </div>
       <div class="hero-cta2"><span class="live"></span><span>Novo: mapa gratuito com <b id="heroN">200</b> normas do CFC e atos da reforma. <a href="#normas">Abrir a galáxia</a></span></div>
@@ -585,7 +683,7 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
       <p>Filtre por grupo ou busca e copie o resultado. O prompt já vem pronto para colar no ChatGPT, Claude ou Gemini e transformar a IA em um assistente contábil com base nas normas.</p>
       <div class="sel" id="gxSel">0 itens</div>
       <div class="btns">
-        <button class="btn gold" id="gxCpPrompt">Copiar prompt para IA <span>&rarr;</span></button>
+        <button class="btn gold" id="gxCpPrompt">Copiar prompt para IA <span></span></button>
         <button class="btn ghost" id="gxCpMd">Copiar em Markdown <span>MD</span></button>
         <button class="btn ghost" id="gxCpJson">Copiar em JSON <span>{ }</span></button>
       </div>
@@ -615,10 +713,10 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
 <section id="atuacao"><div class="wrap">
   <div class="rv"><div class="kick"><span class="idx">01</span>Atuação</div><h2 class="sl">Quatro frentes, <i>um objetivo.</i></h2><p class="sub">Levar a contabilidade para onde as decisões são tomadas: com dados, tecnologia e clareza.</p></div>
   <div class="grid4">
-    <div class="card rv"><div class="n">01</div><h3>Contabilidade e tributos</h3><p>Reforma tributária, IBS e CBS, imposto de renda e planejamento tributário explicados com números reais.</p></div>
-    <div class="card rv"><div class="n">02</div><h3>Auditoria e estratégia</h3><p>Leitura crítica de demonstrações, indicadores e processos. Do controle ao relatório que orienta a gestão.</p></div>
-    <div class="card rv"><div class="n">03</div><h3>Tecnologia e IA</h3><p>Agentes de IA, automações e sistemas que tiram o trabalho repetitivo da rotina contábil.</p></div>
-    <div class="card rv"><div class="n">04</div><h3>Consultoria</h3><p>Projetos de custos, processos, mercado e tributos para pequenos negócios, com a equipe da Consulte Jr.</p></div>
+    <div class="card rv"><h3>Contabilidade e tributos</h3><p>Reforma tributária, IBS e CBS, imposto de renda e planejamento tributário explicados com números reais.</p></div>
+    <div class="card rv"><h3>Auditoria e estratégia</h3><p>Leitura crítica de demonstrações, indicadores e processos. Do controle ao relatório que orienta a gestão.</p></div>
+    <div class="card rv"><h3>Tecnologia e IA</h3><p>Agentes de IA, automações e sistemas que tiram o trabalho repetitivo da rotina contábil.</p></div>
+    <div class="card rv"><h3>Consultoria</h3><p>Projetos de custos, processos, mercado e tributos para pequenos negócios, com a equipe da Consulte Jr.</p></div>
   </div>
 </div></section>
 
@@ -629,14 +727,14 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
       <div class="bebas">IR 2027</div>
       <h3>Manual do IR 2027</h3>
       <p>Treze páginas com a isenção de R$ 5 mil, as tabelas, o alerta das duas rendas e os erros que levam à malha fina.</p>
-      <a class="btn gold" href="https://drive.google.com/file/d/1tZUdhQxEQAaKb--z3ND4S6lukWqo-PQV/view" target="_blank" rel="noopener">Baixar grátis &rarr;</a>
+      <a class="btn gold" href="https://drive.google.com/file/d/1tZUdhQxEQAaKb--z3ND4S6lukWqo-PQV/view" target="_blank" rel="noopener">Baixar grátis</a>
     </div>
     <div class="list rv">
-      <a href="https://drive.google.com/file/d/17gxvhqAtwsJUozolnFFFljokGa-clcN-/view" target="_blank" rel="noopener"><span>Guia rápido do split payment<small>PDF grátis, 6 páginas, com checklist</small></span>&rarr;</a>
-      <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span>Reforma tributária em 6 telas<small>Carrossel no Instagram</small></span>&rarr;</a>
-      <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span>O seu prato em 2027<small>Os dois lados da cesta básica</small></span>&rarr;</a>
-      <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span>Split payment explicado<small>O imposto antes do caixa</small></span>&rarr;</a>
-      <a href="https://emanuelluz.taplink.bio/" target="_blank" rel="noopener"><span>Todos os links<small>emanuelluz.taplink.bio</small></span>&rarr;</a>
+      <a href="https://drive.google.com/file/d/17gxvhqAtwsJUozolnFFFljokGa-clcN-/view" target="_blank" rel="noopener"><span>Guia rápido do split payment<small>PDF grátis, 6 páginas, com checklist</small></span></a>
+      <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span>Reforma tributária em 6 telas<small>Carrossel no Instagram</small></span></a>
+      <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span>O seu prato em 2027<small>Os dois lados da cesta básica</small></span></a>
+      <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span>Split payment explicado<small>O imposto antes do caixa</small></span></a>
+      <a href="https://emanuelluz.taplink.bio/" target="_blank" rel="noopener"><span>Todos os links<small>emanuelluz.taplink.bio</small></span></a>
     </div>
   </div>
 </div></section>
@@ -644,7 +742,7 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
 <section class="light" id="projetos" style="background:#e6e3dc"><div class="wrap">
   <div class="rv"><div class="kick"><span class="idx">03</span>Projetos</div><h2 class="sl">Projetos e <i>parcerias.</i></h2><p class="sub">Ferramentas reais, usadas em sala de aula, em consultoria e em negócios.</p></div>
   <div class="proj">
-    <div class="pc wide rv"><div class="tag">Inteligência artificial &middot; UEFS</div><h3>ÍCARO</h3><p>Assistente de aula com voz e rosto holográfico, desenvolvido em colaboração com o Prof. Rômulo Benício para a 1ª Imersão Tecnológica Contábil da UEFS (ITCONT 2026), no projeto Contador do Amanhã.</p><a href="https://itcont-uefs.onrender.com/" target="_blank" rel="noopener">Ver o ÍCARO &rarr;</a></div>
+    <div class="pc wide rv"><div class="tag">Inteligência artificial &middot; UEFS</div><h3>ÍCARO</h3><p>Assistente de aula com voz e rosto holográfico, desenvolvido em colaboração com o Prof. Rômulo Benício para a 1ª Imersão Tecnológica Contábil da UEFS (ITCONT 2026), no projeto Contador do Amanhã.</p><a href="https://itcont-uefs.onrender.com/" target="_blank" rel="noopener">Ver o ÍCARO</a></div>
     <div class="pc rv"><div class="tag">Consultoria &middot; Dados</div><h3>Plataforma de pesquisa de mercado</h3><p>Sistema próprio de coleta e análise usado pela Consulte Jr. Atendeu o maior case da empresa em 2026.</p></div>
     <div class="pc rv full"><div class="tag">Empresa &middot; Sistemas</div><h3>Quality Jacuípe</h3><p>Sistemas de gestão sob medida, calculadora de propostas, gerador de contratos e auditoria de sites. Parte da visão do Vale do Jacuípe.</p></div>
   </div>
@@ -720,8 +818,8 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
     <a href="https://drive.google.com/file/d/17gxvhqAtwsJUozolnFFFljokGa-clcN-/view" target="_blank" rel="noopener"><span class="n">02</span><span class="t">Guia rápido do split payment<small>PDF grátis, 6 páginas</small></span><span class="tag">Grátis</span></a>
     <div class="soon"><span class="n">03</span><span class="t">Notícias diárias no WhatsApp<small>Resumo de contabilidade todo dia</small></span><span class="tag">Em breve</span></div>
     <div class="soon"><span class="n">04</span><span class="t">Agente de IA: Assistente da Reforma<small>Tire dúvidas sobre IBS e CBS</small></span><span class="tag">Em breve</span></div>
-    <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span class="n">05</span><span class="t">Instagram<small>@emanuelluz.contabilidade</small></span><span>&rarr;</span></a>
-    <a href="https://www.instagram.com/cont_amanha/" target="_blank" rel="noopener"><span class="n">06</span><span class="t">Projeto Contador do Amanhã<small>IA na contabilidade | UEFS</small></span><span>&rarr;</span></a>
+    <a href="https://www.instagram.com/emanuelluz.contabilidade/" target="_blank" rel="noopener"><span class="n">05</span><span class="t">Instagram<small>@emanuelluz.contabilidade</small></span><span></span></a>
+    <a href="https://www.instagram.com/cont_amanha/" target="_blank" rel="noopener"><span class="n">06</span><span class="t">Projeto Contador do Amanhã<small>IA na contabilidade | UEFS</small></span><span></span></a>
   </div>
 </div></section>
 
@@ -893,7 +991,7 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
       '<div class="wh"><div class="wlogo" aria-label="EZ Contabilidade"><img src="'+(AS.mono||'')+'" alt=""><span><b>EZ <em>Contabilidade</em></b><small>Emanuel luZ &middot; Accounting</small></span></div><div><div class="kick">Bem-vindo à EZ Contabilidade</div><h2 id="ezWmT">Tudo aqui é <i>de graça.</i></h2>'+
       '<p>Siga a trilha, ganhe XP e chegue ao nível <b>Contador do Amanhã</b>. Seu progresso fica salvo neste navegador.</p></div></div>'+
       trailHTML()+'<div class="wlist">'+list+'</div>'+
-      '<div class="wacts"><button class="btn gold" data-start>Começar a trilha &rarr;</button><button class="btn ghost" data-x>Explorar sozinho</button></div></div>';
+      '<div class="wacts"><button class="btn gold" data-start>Começar a trilha</button><button class="btn ghost" data-x>Explorar sozinho</button></div></div>';
     liveLabels(wm.querySelector('.holo'));
     wm.querySelectorAll('[data-s]').forEach(function(b){b.onclick=function(){go(STEPS[+b.getAttribute('data-s')])}});
     wm.querySelector('[data-start]').onclick=function(){var nx=STEPS.filter(function(s){return !stepDone(s)})[0]||STEPS[1];go(nx)};
@@ -925,7 +1023,7 @@ body.hero2 #gl2{display:block}body.hero2 #gl{display:none}
       h+='</div><div class="qz-fb" id="qzFb"></div>';box.innerHTML=h;locked=false;
       box.querySelectorAll('.qz-opts button').forEach(function(b){b.onclick=function(){if(locked)return;locked=true;var j=+b.getAttribute('data-j'),ok=j===q.a;if(ok)score++;
         box.querySelectorAll('.qz-opts button').forEach(function(x,k){if(k===q.a)x.classList.add('ok');else if(k===j)x.classList.add('no');x.disabled=true});
-        var fb=document.getElementById('qzFb');fb.innerHTML='<b>'+(ok?'Certo.':'Quase.')+'</b> '+q.e+'<div class="qz-row"><button class="lnk" id="qzSee">Ver na galáxia</button><button class="btn gold" id="qzNext">'+(i<4?'Próxima &rarr;':'Ver resultado')+'</button></div>';fb.classList.add('on');
+        var fb=document.getElementById('qzFb');fb.innerHTML='<b>'+(ok?'Certo.':'Quase.')+'</b> '+q.e+'<div class="qz-row"><button class="lnk" id="qzSee">Ver na galáxia</button><button class="btn gold" id="qzNext">'+(i<4?'Próxima':'Ver resultado')+'</button></div>';fb.classList.add('on');
         document.getElementById('qzNext').onclick=function(){i++;show()};
         document.getElementById('qzSee').onclick=function(){var inp=document.getElementById('gxQ');if(inp){inp.value=q.s;inp.dispatchEvent(new Event('input'));document.getElementById('normas').scrollIntoView({behavior:'smooth'})}};
       }})}
@@ -1033,7 +1131,7 @@ document.querySelectorAll('[data-hv]').forEach(function(b){b.onclick=function(){
     r.sort(s==='az'?function(a,b){return a.titulo.localeCompare(b.titulo,'pt',{numeric:true})}:s==='desc'?function(a,b){return b.data.localeCompare(a.data)||a.titulo.localeCompare(b.titulo,'pt')}:function(a,b){return a.data.localeCompare(b.data)||a.titulo.localeCompare(b.titulo,'pt')});
     cnt.textContent=r.length+(r.length===1?' norma':' normas');
     if(!r.length){list.innerHTML='<div class="lempty">Nada encontrado. Tente "6.404", "exame de suficiência", "CPC 47" ou "Simples".</div>';return}
-    list.innerHTML=r.slice(0,lim).map(function(o){return '<article class="lrow"><div class="ld">'+br(o.data)+'<span class="lo '+o.orgao.toLowerCase()+'">'+o.orgao+'</span></div><div class="lt"><b>'+esc(o.titulo)+'</b><p>'+esc(o.ementa)+'</p><div class="la">'+(o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener">Texto oficial &rarr;</a>':'')+'<a href="https://github.com/ctresb/leis/blob/main/'+encodeURI(o.arquivo)+'" target="_blank" rel="noopener">Ver no acervo</a></div></div></article>'}).join('')+
+    list.innerHTML=r.slice(0,lim).map(function(o){return '<article class="lrow"><div class="ld">'+br(o.data)+'<span class="lo '+o.orgao.toLowerCase()+'">'+o.orgao+'</span></div><div class="lt"><b>'+esc(o.titulo)+'</b><p>'+esc(o.ementa)+'</p><div class="la">'+(o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener">Texto oficial</a>':'')+'<a href="https://github.com/ctresb/leis/blob/main/'+encodeURI(o.arquivo)+'" target="_blank" rel="noopener">Ver no acervo</a></div></div></article>'}).join('')+
       (r.length>lim?'<button class="lmore" id="lmore">Mostrar mais '+Math.min(40,r.length-lim)+' de '+(r.length-lim)+'</button>':'');
     var m=document.getElementById('lmore');if(m)m.onclick=function(){lim+=40;render()}}
   var t;q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(function(){lim=40;render()},120)});so.onchange=function(){lim=40;render()};
@@ -1185,7 +1283,7 @@ document.querySelectorAll('[data-hv]').forEach(function(b){b.onclick=function(){
   function open(it){sel=it;if(window.EZG)EZG.seen(it);var m='';
     if(it.correlacao)m+='<span>'+esc(it.correlacao)+'</span>';if(it.tipo)m+='<span>'+esc(it.tipo)+'</span>';if(it.data)m+='<span>'+esc(it.data)+'</span>';if(it.verificar)m+='<span class="warn">Conferir texto oficial</span>';
     pnl.innerHTML='<button class="x" aria-label="Fechar">&times;</button><div class="g">'+esc(it.grupo)+' &middot; '+esc(NAMES[it.grupo]||'')+'</div><h3>'+esc(it.codigo)+'</h3><div class="t">'+esc(it.titulo)+'</div><div class="m">'+m+'</div><p class="r">'+esc(it.resumo)+'</p><div class="acts">'+
-      (it.url?'<a class="btn gold" href="'+esc(it.url)+'" target="_blank" rel="noopener">Abrir texto oficial &rarr;</a>':(it.pg?'<a class="btn gold" href="'+esc(it.pg)+'" target="_blank" rel="noopener">Ver no site do CFC &rarr;</a>':''))+'<button class="btn ghost" data-c="1">Copiar para minha IA</button><div class="gx-more">'+(it.k==='n'?'<a href="https://www.in.gov.br/consulta/-/buscar/dou?q=%22'+encodeURIComponent(it.codigo.replace(/\s*\(R\d+\)/,''))+'%22&s=todos&exactDate=all&sortType=0" target="_blank" rel="noopener">Buscar no Diário Oficial</a>':'')+(it.arq?'<a href="'+esc(it.arq)+'" target="_blank" rel="noopener" title="O servidor antigo do CFC costuma ser lento">Arquivo .doc do CFC (lento)</a>':'')+'</div>'+(D.links_verificados?'<p class="gx-ver">&#10003; Links verificados em '+esc(D.links_verificados)+'</p>':'')+'</div>';
+      (it.url?'<a class="btn gold" href="'+esc(it.url)+'" target="_blank" rel="noopener">Abrir texto oficial</a>':(it.pg?'<a class="btn gold" href="'+esc(it.pg)+'" target="_blank" rel="noopener">Ver no site do CFC</a>':''))+'<button class="btn ghost" data-c="1">Copiar para minha IA</button><div class="gx-more">'+(it.k==='n'?'<a href="https://www.in.gov.br/consulta/-/buscar/dou?q=%22'+encodeURIComponent(it.codigo.replace(/\s*\(R\d+\)/,''))+'%22&s=todos&exactDate=all&sortType=0" target="_blank" rel="noopener">Buscar no Diário Oficial</a>':'')+(it.arq?'<a href="'+esc(it.arq)+'" target="_blank" rel="noopener" title="O servidor antigo do CFC costuma ser lento">Arquivo .doc do CFC (lento)</a>':'')+'</div>'+(D.links_verificados?'<p class="gx-ver">&#10003; Links verificados em '+esc(D.links_verificados)+'</p>':'')+'</div>';
     pnl.classList.add('open');pnl.querySelector('.x').onclick=function(){pnl.classList.remove('open');sel=null};
     pnl.querySelector('[data-c]').onclick=function(){copy(md([it])+'\n'+SRC,'Norma copiada');if(window.EZG)EZG.exported()};
     var w=pos(it,T);target.x=w.x+(W>700?120/target.s:0);target.y=w.y;if(target.s<.8)target.s=.9;
@@ -1235,10 +1333,11 @@ document.querySelectorAll('[data-hv]').forEach(function(b){b.onclick=function(){
   // norma do dia
   var dEl=document.getElementById('gxDay');
   if(dEl&&items.length){var pool=items.filter(function(i){return i.k==='n'&&i.resumo});var dt=new Date(),di=(dt.getFullYear()*372+dt.getMonth()*31+dt.getDate())%pool.length,it=pool[di];
-    dEl.innerHTML='<span class="k">Norma do dia</span><b>'+esc(it.codigo)+'</b><span class="t">'+esc(it.titulo)+'</span><span class="go">Abrir &rarr;</span>';
+    dEl.innerHTML='<span class="k">Norma do dia</span><b>'+esc(it.codigo)+'</b><span class="t">'+esc(it.titulo)+'</span><span class="go">Abrir</span>';
     dEl.onclick=function(){if(window.EZG&&EZG.mark)EZG.mark('dia','Norma do dia');cv.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){open(it)},450)}}
 };
 
 (function(){var done=false;function go(d){if(done)return;done=true;window.GXinit(d)}
 try{var t=setTimeout(function(){go(window.GX)},2500);fetch('data/galaxia.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){clearTimeout(t);go(d&&d.normas?d:window.GX)}).catch(function(){clearTimeout(t);go(window.GX)})}catch(e){go(window.GX)}})();</script>
+<script>document.addEventListener('pointermove',function(e){var c=e.target.closest&&e.target.closest('.card,.feature');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});</script>
 </body></html>

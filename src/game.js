@@ -111,7 +111,7 @@
       '<div class="wh"><div class="wlogo" aria-label="EZ Contabilidade"><img src="'+(AS.mono||'')+'" alt=""><span><b>EZ <em>Contabilidade</em></b><small>Emanuel luZ &middot; Accounting</small></span></div><div><div class="kick">Bem-vindo à EZ Contabilidade</div><h2 id="ezWmT">Tudo aqui é <i>de graça.</i></h2>'+
       '<p>Siga a trilha, ganhe XP e chegue ao nível <b>Contador do Amanhã</b>. Seu progresso fica salvo neste navegador.</p></div></div>'+
       trailHTML()+'<div class="wlist">'+list+'</div>'+
-      '<div class="wacts"><button class="btn gold" data-start>Começar a trilha &rarr;</button><button class="btn ghost" data-x>Explorar sozinho</button></div></div>';
+      '<div class="wacts"><button class="btn gold" data-start>Começar a trilha</button><button class="btn ghost" data-x>Explorar sozinho</button></div></div>';
     liveLabels(wm.querySelector('.holo'));
     wm.querySelectorAll('[data-s]').forEach(function(b){b.onclick=function(){go(STEPS[+b.getAttribute('data-s')])}});
     wm.querySelector('[data-start]').onclick=function(){var nx=STEPS.filter(function(s){return !stepDone(s)})[0]||STEPS[1];go(nx)};
@@ -143,7 +143,7 @@
       h+='</div><div class="qz-fb" id="qzFb"></div>';box.innerHTML=h;locked=false;
       box.querySelectorAll('.qz-opts button').forEach(function(b){b.onclick=function(){if(locked)return;locked=true;var j=+b.getAttribute('data-j'),ok=j===q.a;if(ok)score++;
         box.querySelectorAll('.qz-opts button').forEach(function(x,k){if(k===q.a)x.classList.add('ok');else if(k===j)x.classList.add('no');x.disabled=true});
-        var fb=document.getElementById('qzFb');fb.innerHTML='<b>'+(ok?'Certo.':'Quase.')+'</b> '+q.e+'<div class="qz-row"><button class="lnk" id="qzSee">Ver na galáxia</button><button class="btn gold" id="qzNext">'+(i<4?'Próxima &rarr;':'Ver resultado')+'</button></div>';fb.classList.add('on');
+        var fb=document.getElementById('qzFb');fb.innerHTML='<b>'+(ok?'Certo.':'Quase.')+'</b> '+q.e+'<div class="qz-row"><button class="lnk" id="qzSee">Ver na galáxia</button><button class="btn gold" id="qzNext">'+(i<4?'Próxima':'Ver resultado')+'</button></div>';fb.classList.add('on');
         document.getElementById('qzNext').onclick=function(){i++;show()};
         document.getElementById('qzSee').onclick=function(){var inp=document.getElementById('gxQ');if(inp){inp.value=q.s;inp.dispatchEvent(new Event('input'));document.getElementById('normas').scrollIntoView({behavior:'smooth'})}};
       }})}

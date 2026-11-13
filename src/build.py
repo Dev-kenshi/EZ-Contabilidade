@@ -175,7 +175,7 @@ __GXCSS__
 </style></head>
 <body>
 <div class="prog" id="prog"></div><div class="cur" id="cur"></div>
-<a class="pill" id="pill" data-manual href="{MANUAL}" target="_blank" rel="noopener">Manual do IR 2027 grátis &rarr;</a>
+<a class="pill" id="pill" data-manual href="{MANUAL}" target="_blank" rel="noopener">Manual do IR 2027 grátis</a>
 <nav id="nav"><div class="wrap">
   <a href="#topo" class="logo"><img src="{MONO}" alt="Monograma EZ Contabilidade" style="width:40px;height:40px">EMANUEL LUZ</a>
   <div class="links" id="links"><a href="#normas">Normas</a><a href="#desafio">Desafio</a><a href="#atuacao">Atuação</a><a href="#conteudo">Grátis</a><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#marca">Marca</a><a href="#local">Local</a><a href="#faq">FAQ</a><a href="#contato">Links</a></div>
@@ -191,7 +191,7 @@ __GXCSS__
       <h1>Contabilidade<br>que <span class="ol">pensa</span><br><i>em dados.</i></h1>
       <p class="lead">Explico impostos, reforma tributária e inteligência artificial para quem quer decidir melhor. Sou Emanuel Luz, Ciências Contábeis na UEFS e aprovado no Exame do CFC.</p>
       <div class="ctas">
-        <a class="btn gold" href="{MANUAL}" target="_blank" rel="noopener">Baixar o Manual do IR 2027 &rarr;</a>
+        <a class="btn gold" href="{MANUAL}" target="_blank" rel="noopener">Baixar o Manual do IR 2027</a>
         <a class="btn ghost" href="#normas">Explorar as normas</a>
       </div>
       <div class="hero-cta2"><span class="live"></span><span>Novo: mapa gratuito com <b id="heroN">200</b> normas do CFC e atos da reforma. <a href="#normas">Abrir a galáxia</a></span></div>
@@ -241,7 +241,7 @@ __GXCSS__
       <p>Filtre por grupo ou busca e copie o resultado. O prompt já vem pronto para colar no ChatGPT, Claude ou Gemini e transformar a IA em um assistente contábil com base nas normas.</p>
       <div class="sel" id="gxSel">0 itens</div>
       <div class="btns">
-        <button class="btn gold" id="gxCpPrompt">Copiar prompt para IA <span>&rarr;</span></button>
+        <button class="btn gold" id="gxCpPrompt">Copiar prompt para IA <span></span></button>
         <button class="btn ghost" id="gxCpMd">Copiar em Markdown <span>MD</span></button>
         <button class="btn ghost" id="gxCpJson">Copiar em JSON <span>{{ }}</span></button>
       </div>
@@ -271,10 +271,10 @@ __GXCSS__
 <section id="atuacao"><div class="wrap">
   <div class="rv"><div class="kick"><span class="idx">01</span>Atuação</div><h2 class="sl">Quatro frentes, <i>um objetivo.</i></h2><p class="sub">Levar a contabilidade para onde as decisões são tomadas: com dados, tecnologia e clareza.</p></div>
   <div class="grid4">
-    <div class="card rv"><div class="n">01</div><h3>Contabilidade e tributos</h3><p>Reforma tributária, IBS e CBS, imposto de renda e planejamento tributário explicados com números reais.</p></div>
-    <div class="card rv"><div class="n">02</div><h3>Auditoria e estratégia</h3><p>Leitura crítica de demonstrações, indicadores e processos. Do controle ao relatório que orienta a gestão.</p></div>
-    <div class="card rv"><div class="n">03</div><h3>Tecnologia e IA</h3><p>Agentes de IA, automações e sistemas que tiram o trabalho repetitivo da rotina contábil.</p></div>
-    <div class="card rv"><div class="n">04</div><h3>Consultoria</h3><p>Projetos de custos, processos, mercado e tributos para pequenos negócios, com a equipe da Consulte Jr.</p></div>
+    <div class="card rv"><h3>Contabilidade e tributos</h3><p>Reforma tributária, IBS e CBS, imposto de renda e planejamento tributário explicados com números reais.</p></div>
+    <div class="card rv"><h3>Auditoria e estratégia</h3><p>Leitura crítica de demonstrações, indicadores e processos. Do controle ao relatório que orienta a gestão.</p></div>
+    <div class="card rv"><h3>Tecnologia e IA</h3><p>Agentes de IA, automações e sistemas que tiram o trabalho repetitivo da rotina contábil.</p></div>
+    <div class="card rv"><h3>Consultoria</h3><p>Projetos de custos, processos, mercado e tributos para pequenos negócios, com a equipe da Consulte Jr.</p></div>
   </div>
 </div></section>
 
@@ -285,14 +285,14 @@ __GXCSS__
       <div class="bebas">IR 2027</div>
       <h3>Manual do IR 2027</h3>
       <p>Treze páginas com a isenção de R$ 5 mil, as tabelas, o alerta das duas rendas e os erros que levam à malha fina.</p>
-      <a class="btn gold" href="{MANUAL}" target="_blank" rel="noopener">Baixar grátis &rarr;</a>
+      <a class="btn gold" href="{MANUAL}" target="_blank" rel="noopener">Baixar grátis</a>
     </div>
     <div class="list rv">
-      <a href="https://drive.google.com/file/d/17gxvhqAtwsJUozolnFFFljokGa-clcN-/view" target="_blank" rel="noopener"><span>Guia rápido do split payment<small>PDF grátis, 6 páginas, com checklist</small></span>&rarr;</a>
-      <a href="{IG}" target="_blank" rel="noopener"><span>Reforma tributária em 6 telas<small>Carrossel no Instagram</small></span>&rarr;</a>
-      <a href="{IG}" target="_blank" rel="noopener"><span>O seu prato em 2027<small>Os dois lados da cesta básica</small></span>&rarr;</a>
-      <a href="{IG}" target="_blank" rel="noopener"><span>Split payment explicado<small>O imposto antes do caixa</small></span>&rarr;</a>
-      <a href="{TAP}" target="_blank" rel="noopener"><span>Todos os links<small>emanuelluz.taplink.bio</small></span>&rarr;</a>
+      <a href="https://drive.google.com/file/d/17gxvhqAtwsJUozolnFFFljokGa-clcN-/view" target="_blank" rel="noopener"><span>Guia rápido do split payment<small>PDF grátis, 6 páginas, com checklist</small></span></a>
+      <a href="{IG}" target="_blank" rel="noopener"><span>Reforma tributária em 6 telas<small>Carrossel no Instagram</small></span></a>
+      <a href="{IG}" target="_blank" rel="noopener"><span>O seu prato em 2027<small>Os dois lados da cesta básica</small></span></a>
+      <a href="{IG}" target="_blank" rel="noopener"><span>Split payment explicado<small>O imposto antes do caixa</small></span></a>
+      <a href="{TAP}" target="_blank" rel="noopener"><span>Todos os links<small>emanuelluz.taplink.bio</small></span></a>
     </div>
   </div>
 </div></section>
@@ -300,7 +300,7 @@ __GXCSS__
 <section class="light" id="projetos" style="background:#e6e3dc"><div class="wrap">
   <div class="rv"><div class="kick"><span class="idx">03</span>Projetos</div><h2 class="sl">Projetos e <i>parcerias.</i></h2><p class="sub">Ferramentas reais, usadas em sala de aula, em consultoria e em negócios.</p></div>
   <div class="proj">
-    <div class="pc wide rv"><div class="tag">Inteligência artificial &middot; UEFS</div><h3>ÍCARO</h3><p>Assistente de aula com voz e rosto holográfico, desenvolvido em colaboração com o Prof. Rômulo Benício para a 1ª Imersão Tecnológica Contábil da UEFS (ITCONT 2026), no projeto Contador do Amanhã.</p><a href="https://itcont-uefs.onrender.com/" target="_blank" rel="noopener">Ver o ÍCARO &rarr;</a></div>
+    <div class="pc wide rv"><div class="tag">Inteligência artificial &middot; UEFS</div><h3>ÍCARO</h3><p>Assistente de aula com voz e rosto holográfico, desenvolvido em colaboração com o Prof. Rômulo Benício para a 1ª Imersão Tecnológica Contábil da UEFS (ITCONT 2026), no projeto Contador do Amanhã.</p><a href="https://itcont-uefs.onrender.com/" target="_blank" rel="noopener">Ver o ÍCARO</a></div>
     <div class="pc rv"><div class="tag">Consultoria &middot; Dados</div><h3>Plataforma de pesquisa de mercado</h3><p>Sistema próprio de coleta e análise usado pela Consulte Jr. Atendeu o maior case da empresa em 2026.</p></div>
     <div class="pc rv full"><div class="tag">Empresa &middot; Sistemas</div><h3>Quality Jacuípe</h3><p>Sistemas de gestão sob medida, calculadora de propostas, gerador de contratos e auditoria de sites. Parte da visão do Vale do Jacuípe.</p></div>
   </div>
@@ -376,8 +376,8 @@ __GXCSS__
     <a href="https://drive.google.com/file/d/17gxvhqAtwsJUozolnFFFljokGa-clcN-/view" target="_blank" rel="noopener"><span class="n">02</span><span class="t">Guia rápido do split payment<small>PDF grátis, 6 páginas</small></span><span class="tag">Grátis</span></a>
     <div class="soon"><span class="n">03</span><span class="t">Notícias diárias no WhatsApp<small>Resumo de contabilidade todo dia</small></span><span class="tag">Em breve</span></div>
     <div class="soon"><span class="n">04</span><span class="t">Agente de IA: Assistente da Reforma<small>Tire dúvidas sobre IBS e CBS</small></span><span class="tag">Em breve</span></div>
-    <a href="{IG}" target="_blank" rel="noopener"><span class="n">05</span><span class="t">Instagram<small>@emanuelluz.contabilidade</small></span><span>&rarr;</span></a>
-    <a href="https://www.instagram.com/cont_amanha/" target="_blank" rel="noopener"><span class="n">06</span><span class="t">Projeto Contador do Amanhã<small>IA na contabilidade | UEFS</small></span><span>&rarr;</span></a>
+    <a href="{IG}" target="_blank" rel="noopener"><span class="n">05</span><span class="t">Instagram<small>@emanuelluz.contabilidade</small></span><span></span></a>
+    <a href="https://www.instagram.com/cont_amanha/" target="_blank" rel="noopener"><span class="n">06</span><span class="t">Projeto Contador do Amanhã<small>IA na contabilidade | UEFS</small></span><span></span></a>
   </div>
 </div></section>
 
@@ -442,6 +442,7 @@ __GXCSS__
 <script>__GXJS__
 (function(){{var done=false;function go(d){{if(done)return;done=true;window.GXinit(d)}}
 try{{var t=setTimeout(function(){{go(window.GX)}},2500);fetch('data/galaxia.json',{{cache:'no-store'}}).then(function(r){{if(!r.ok)throw 0;return r.json()}}).then(function(d){{clearTimeout(t);go(d&&d.normas?d:window.GX)}}).catch(function(){{clearTimeout(t);go(window.GX)}})}}catch(e){{go(window.GX)}}}})();</script>
+<script>document.addEventListener('pointermove',function(e){{var c=e.target.closest&&e.target.closest('.card,.feature');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}},{{passive:true}});</script>
 </body></html>'''
 import datetime
 def L(p):
@@ -452,7 +453,7 @@ LS=L(P('data','links_status.json')) or {}
 NOR=L(P('data','normas_cfc.json')); REF=L(P('data','reforma.json'))
 UPD='12/11/2026'
 data=json.dumps({'normas':NOR,'reforma':REF,'atualizado':UPD,'links_verificados':LS.get('verificado','') if isinstance(LS,dict) else ''},ensure_ascii=False).replace('</','<\\/')
-html=html.replace('__LEIS__',json.dumps([{k:o[k] for k in ('titulo','tipo','data','ementa','orgao','url','arquivo')} for o in json.load(open(P('data','leis.json')))],ensure_ascii=False).replace('\u2014',',').replace('</','<\\/')).replace('__LAND__',open(P('data','land-dots.json')).read()).replace('__GXCSS__',open(P('src','galaxy.css')).read()+open(P('src','game.css')).read()).replace('__GXJS__',open(P('src','galaxy.js')).read()).replace('__GXDATA__',data).replace('__GAMEJS__',open(P('src','game.js')).read()).replace('__GLOBEJS__',open(P('src','globe.js')).read()).replace('__LEISJS__',open(P('src','leis.js')).read()).replace('__UPD__',UPD)
+html=html.replace('__LEIS__',json.dumps([{k:o[k] for k in ('titulo','tipo','data','ementa','orgao','url','arquivo')} for o in json.load(open(P('data','leis.json')))],ensure_ascii=False).replace('\u2014',',').replace('</','<\\/')).replace('__LAND__',open(P('data','land-dots.json')).read()).replace('__GXCSS__',open(P('src','galaxy.css')).read()+open(P('src','game.css')).read()+open(P('src','texture.css')).read()).replace('__GXJS__',open(P('src','galaxy.js')).read()).replace('__GXDATA__',data).replace('__GAMEJS__',open(P('src','game.js')).read()).replace('__GLOBEJS__',open(P('src','globe.js')).read()).replace('__LEISJS__',open(P('src','leis.js')).read()).replace('__UPD__',UPD)
 open(P('index.html'),'w').write(html)
 open(P('data','galaxia.json'),'w').write(json.dumps({'normas':NOR,'reforma':REF,'atualizado':UPD,'links_verificados':LS.get('verificado','') if isinstance(LS,dict) else ''},ensure_ascii=False,indent=1))
 print(len(html)//1024, "KB")
